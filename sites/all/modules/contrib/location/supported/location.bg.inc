@@ -3,8 +3,7 @@
 // Bulgaria
 
 function location_province_list_bg() {
-  return array(
-    '01' => "Blagoevgrad",
+  return array('01' => "Blagoevgrad",
     '02' => "Burgas",
     '03' => "Varna",
     '04' => "Veliko Turnovo",
@@ -31,8 +30,7 @@ function location_province_list_bg() {
     '25' => "Turgovishte",
     '26' => "Khaskovo",
     '27' => "Shumen",
-    '28' => "Yambol"
-  );
+    '28' => "Yambol");
 }
 
 /**

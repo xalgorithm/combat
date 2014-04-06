@@ -334,12 +334,13 @@ function faq_ask_form_faq_node_form_alter(&$form, &$form_state) {
       // Make sure the category field does not expand too wide
       $fields = field_info_instances('node', 'faq');
       foreach ($fields as $name => $properties) {
-        if ($properties['display']['default']['module'] != 'taxonomy'
-          && isset($form[$name])
-          && $properties['field_name'] == 'field_tags'
-          )
-        $form[$name][$form[$name]['#language']]['#cols'] = '';
-        $form[$name][$form[$name]['#language']]['#size'] = '';
+        if (isset($properties['display']['default']['module'])
+            && $properties['display']['default']['module'] != 'taxonomy'
+            && isset($form[$name])
+            && $properties['field_name'] == 'field_tags') {
+          $form[$name][$form[$name]['#language']]['#cols'] = '';
+          $form[$name][$form[$name]['#language']]['#size'] = '';
+        }
       }
 
       // Email field
@@ -511,6 +512,18 @@ function faq_ask_node_insert($node) {
           simplenews_subscribe_user($asker_email, $tid,  variable_get('faq_ask_notify_asker_simplenews_confirm', 1), 'FAQ-Ask');
         }
       }
+
+      if (module_exists('mailchimp') && $lid = variable_get('faq_ask_notify_asker_mailchimp_lid', '0') && function_exists('mailchimp_get_list')) {
+        // If we have selected a newsletter to add
+        // dpm($lid, 'list ID');
+        $list = mailchimp_get_list($lid);
+        // dpm($list, 'list');
+        if (function_exists('mailchimp_subscribe_user') && !empty($list)) {
+          // Add optional groupings information like terms
+          $merge_vars = array('GROUPINGS' => array('groups' => 'FAQ-Ask'));
+          mailchimp_subscribe_user($list, $asker_email, $merge_vars, $message = TRUE, $mcapi = NULL);
+        }
+      }
     }
     elseif (isset($node->faq_notify) && $node->faq_notify) {
       $asker_email = $user->mail;
@@ -572,10 +585,11 @@ function _faq_ask_get_terms($data) {
   if (is_object($data))
     $data = (array)$data;
 
-  // Get fields relevant for the faq node
+  // Get fields relevant for the faq node and
   $fields = field_info_instances('node', 'faq');
   foreach ($fields as $name => $properties) {
-    if ($properties['display']['default']['module'] != 'taxonomy')
+    if (isset($properties['display']['default']['module'])
+          && $properties['display']['default']['module'] != 'taxonomy')
       unset($fields[$name]);
   }
 
@@ -798,7 +812,8 @@ function faq_ask_a_question_blockform() {
     // Create the form
     $form = node_add('faq');
     // Restore title, which will have been overridden.
-    drupal_set_title($title);
+    drupal_set_title($title, PASS_THROUGH);  // Issue #1811600 by TBarina: Giving permission to Ask a Question causes all node titles to display &;#039; instead of apostrophe.
+                                             // Adding param const PASS_THROUGH tp the drupal_set_title() function to avoid check_plain()
 
     // Restore the $_GET['ask'] variable status
     if ($saved_get != '') {
@@ -1135,8 +1150,9 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
   $query1->condition('u.uid', '1');
   $admin = ucwords($query1->execute()->fetchField());
 
+  // ---------------------------------------------
   // Get the Simplenews newsletters if they exists
-  $newsletters = array('0' => t('No newsletter'));
+  $sn_newsletters = array('0' => t('No newsletter'));
 
   if (module_exists('simplenews')) {
     if (!function_exists('simplenews_get_newsletters')) {
@@ -1147,9 +1163,29 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
       foreach ($list as $key => $object) {
         $list[$key] = $object->name;
       }
-      $newsletters += $list;
+      $sn_newsletters += $list;
     }
   }
+
+  // ---------------------------------------------
+  // Get the MailChimp newsletters if they exists
+  // mailchimp_subscribe_user
+  $mc_newsletters = array('0' => t('No newsletter'));
+
+  if (module_exists('mailchimp_lists')) {
+    if (!function_exists('mailchimp_lists_get_available_lists')) {
+      drupal_set_message(t('The MailChimp integration is not compatible with this version of MailChimp. Please download a later version.'), 'error');
+    }
+    else {
+      $mc_lists =  mailchimp_get_lists();
+//      dpm($mc_lists);
+      foreach ($mc_lists as $key => $object) {
+        $mc_lists[$object['id']] = $object['name'];
+      }
+      $mc_newsletters += $mc_lists;
+    }
+  }
+
 
   $form['notification'] = array(
     '#type' => 'fieldset',
@@ -1191,24 +1227,61 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
 
     );
 
+  $form['notification']['notify_asker']['simplenews'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Simplenews newsletter integration'),
+    '#collapsible' => TRUE,
+    '#collapsed' => !module_exists('simplenews'),
+    );
+
   // If the Simplenews module is loaded we can add functionality to add anonymous askers to a newsletter
-  $form['notification']['notify_asker']['faq_ask_notify_asker_simplenews'] = array(
+  $form['notification']['notify_asker']['simplenews']['faq_ask_notify_asker_simplenews'] = array(
     '#type' => 'select',
     '#title' => t('Add anonymous asker to newsletter'),
     '#default_value' => variable_get('faq_ask_notify_asker_simplenews_tid', '0'),
-    '#options' => $newsletters,
+    '#options' => $sn_newsletters,
     '#description' => (module_exists('simplenews') ? t('Select a newsletter you want anonymous askers to be assigned to.') : t('This functionality needs the <a href="http://drupal.org/project/simplenews">Simplenews module</a> to be activated.')),
     '#disabled' => !module_exists('simplenews'),
     '#states' => array(
       'visible' => array(':input[name="faq_ask_asker_notify"]' => array('checked' => TRUE))),
     );
 
-  $form['notification']['notify_asker']['faq_ask_notify_asker_simplenews_confirm'] = array(
+  $form['notification']['notify_asker']['simplenews']['faq_ask_notify_asker_simplenews_confirm'] = array(
     '#type' => 'checkbox',
     '#title' => t('Confirm subscription to newsletter'),
     '#description' => t('If this box is checked, the asker creating the question will be asked to confirm the subscription of the newsletter.'),
     '#default_value' => variable_get('faq_ask_notify_asker_simplenews_confirm', 1),
     '#disabled' => !module_exists('simplenews'),
+    '#states' => array(
+      'visible' => array(':input[name="faq_ask_asker_notify"]' => array('checked' => TRUE))),
+  );
+
+  $form['notification']['notify_asker']['mailchimp'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('MailChimp newsletter integration'),
+    '#collapsible' => TRUE,
+    '#collapsed' => !module_exists('mailchimp_lists'),
+    );
+//dpm($mc_newsletters);
+//dpm(variable_get('faq_ask_notify_asker_mailchimp_lid', '0'));
+  // If the MailChimp module is loaded we can add functionality to add anonymous askers to a newsletter
+  $form['notification']['notify_asker']['mailchimp']['faq_ask_notify_asker_mailchimp'] = array(
+    '#type' => 'select',
+    '#title' => t('Add anonymous asker to newsletter'),
+    '#default_value' => variable_get('faq_ask_notify_asker_mailchimp_lid', '0'),
+    '#options' => $mc_newsletters,
+    '#description' => (module_exists('mailchimp_lists') ? t('Select a newsletter you want anonymous askers to be assigned to.') : t('This functionality needs the <a href="http://drupal.org/project/mailchimp_lists">MailChimp module</a> to be activated.')),
+    '#disabled' => !module_exists('mailchimp_lists'),
+    '#states' => array(
+      'visible' => array(':input[name="faq_ask_asker_notify"]' => array('checked' => TRUE))),
+    );
+
+  $form['notification']['notify_asker']['mailchimp']['faq_ask_notify_asker_mailchimp_confirm'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Confirm subscription to newsletter'),
+    '#description' => t('If this box is checked, the asker creating the question will be asked to confirm the subscription of the newsletter.'),
+    '#default_value' => variable_get('faq_ask_notify_asker_simplenews_confirm', 1),
+    '#disabled' => !module_exists('mailchimp_lists'),
     '#states' => array(
       'visible' => array(':input[name="faq_ask_asker_notify"]' => array('checked' => TRUE))),
   );
@@ -1323,21 +1396,30 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
   if (count($vocabs) == 1) {
     // Single vocabulary, don't bother with a selection box, just set it.
     $vid = key($vocabs);
-    $def_vid = $vid;
+    $def_vid = array($vid => $vid);
     variable_set('faq_ask_vocabularies', array($vid => $vid));
     $vobj = $vocabs[$vid];
     $free = $vobj->name;
   }
   else {
     // Multiple vocabs available.
-    $voc_list = array();
-    $def_vid = 0;  // variable_get('faq_ask_vocabularies', 0)?
+    $voc_list = array();  // Clear vocabulary list
+    $def_vid = array();  // Clear default selected list
     foreach ($vocabs as $vid => $vobj) {
-      $voc_list[$vid] = $vobj->name;
+      $voc_list[$vid] = $vobj->name;  // Create selection list
       if ($vobj->name == 'FAQ') {
-        $def_vid = $vid;
+        $def_vid[$vid] = $vid;        // Create default selected list
       }
     }
+
+    if (empty($def_vid))              // If no default selected vocabs, then default select all of them
+      $def_vid = array_keys($voc_list);  // variable_get('efaq_ask_vocabularies', 0)?
+
+    /* Issue #161406 by phazer: Categories not included in the FAQ list are showing up on the Expert Grid
+     * Changed default vids to reflect an array rather than a separate vocab.
+     * Also changed the vocab list terms retrieved are based upon
+     */
+
     $form['experts']['faq_ask_vocabularies'] = array(
       '#type' => 'select',
       '#options' => $voc_list,
@@ -1353,7 +1435,6 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
 
   // Changed query and loop because it failed if 'answer' was the first perm in list.
   // This should be faster any way.
-  //$r_res = db_query("SELECT r.rid, r.name FROM {role} r JOIN {permission} p USING (rid) WHERE p.perm LIKE '%%answer question%%'");
   $query1 = db_select('role', 'r');
   $query1->join('role_permission', 'p', 'r.rid = p.rid');
   $query1->condition('p.permission', '%%answer question%%', 'LIKE' );
@@ -1372,24 +1453,17 @@ function faq_ask_settings_form($form, &$form_state /*, $op = NULL, $aid = NULL*/
   }
 
   // Get all terms associated with FAQ.
-  //$vocabs = variable_get('faq_ask_vocabularies', $def_vid);
-  $vocabs_array = array();
-  foreach ($vocabs as $vocab) {
-    $vocabs_array[$vocab->vid] = $vocab->vid;
-  }
+  $vocabs_array = variable_get('faq_ask_vocabularies', $def_vid);
 
-//  $result = db_query('SELECT td.tid, td.name, td.description FROM {taxonomy_term_data} td WHERE td.vid IN (' . db_placeholders($vocabs_array) . ') ORDER BY td.weight ASC, td.name ASC', $vocabs_array);
   $result = db_select('taxonomy_term_data', 'td')
     ->condition('td.vid', $vocabs_array, 'IN')
     ->fields('td', array('tid', 'name', 'description'))
     ->orderBy('td.weight')->orderBy('td.name')
     ->execute()
     ->fetchAllAssoc('tid');
-//  $result = db_query("SELECT td.tid, td.name, td.description FROM {term_data} td WHERE td.vid IN (". db_placeholders($vocabs) .") ORDER BY td.weight ASC, td.name ASC", $vocabs);
 
   $faq_terms = array();
   foreach ($result as $term) {
-//  while ($term = db_fetch_array($result)) {
     // Show term hierarchy?
     $term_name = /* str_repeat('--', $term['depth']) . */ check_plain($term->name);
     if (substr($term->description, 0, 9) == 'suggested') {
@@ -1604,6 +1678,8 @@ function faq_ask_settings_form_submit($form, &$form_state) {
   variable_set('faq_ask_notify_asker', $form_state['values']['faq_ask_asker_notify']);
   variable_set('faq_ask_notify_asker_simplenews_tid', $form_state['values']['faq_ask_notify_asker_simplenews']);
   variable_set('faq_ask_notify_asker_simplenews_confirm', $form_state['values']['faq_ask_notify_asker_simplenews_confirm']);
+  variable_set('faq_ask_notify_asker_mailchimp_lid', $form_state['values']['faq_ask_notify_asker_mailchimp']);
+  variable_set('faq_ask_notify_asker_mailchimp_confirm', $form_state['values']['faq_ask_notify_asker_mailchimp_confirm']);
   variable_set('faq_ask_notify_by_cron', $form_state['values']['faq_ask_asker_notify_cron']);
   variable_set('faq_ask_unanswered', $form_state['values']['faq_ask_unanswered']);
   variable_set('faq_ask_default_expert', $form_state['values']['faq_ask_default_expert']);

@@ -3,8 +3,7 @@
 // Jamaica
 
 function location_province_list_jm() {
-  return array(
-    'CLA' => "Clarendon Parish",
+  return array('CLA' => "Clarendon Parish",
     'HAN' => "Hanover Parish",
     'KIN' => "Kingston Parish",
     'MAN' => "Manchester Parish",
@@ -17,8 +16,7 @@ function location_province_list_jm() {
     'MAR' => "Saint Mary Parish",
     'THO' => "Saint Thomas Parish",
     'TRL' => "Trelawny Parish",
-    'WML' => "Westmoreland Parish"
-  );
+    'WML' => "Westmoreland Parish");
 }
 
 /**

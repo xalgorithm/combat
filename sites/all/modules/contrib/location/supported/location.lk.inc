@@ -3,8 +3,7 @@
 // Sri Lanka
 
 function location_province_list_lk() {
-  return array(
-    'CE' => "Central",
+  return array('CE' => "Central",
     'EA' => "Eastern",
     'NC' => "North Central",
     'NO' => "Northern",
@@ -12,8 +11,7 @@ function location_province_list_lk() {
     'SA' => "Sabaragamuwa",
     'SO' => "Southern",
     'UV' => "Uva",
-    'WE' => "Western"
-  );
+    'WE' => "Western");
 }
 
 /**

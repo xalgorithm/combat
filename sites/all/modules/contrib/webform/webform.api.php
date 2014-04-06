@@ -73,7 +73,7 @@ function hook_webform_select_options_info_alter(&$items) {
  *   without the nesting.
  * @param $filter
  *   Boolean value indicating whether the included options should be passed
- *   through the _webform_filter_values() function for token replacement (only)
+ *   through the webform_replace_tokens() function for token replacement (only)
  *   needed if your list contains tokens).
  * @param $arguments
  *   The "options arguments" specified in hook_webform_select_options_info().
@@ -115,7 +115,7 @@ function hook_webform_submission_load(&$submissions) {
 function hook_webform_submission_presave($node, &$submission) {
   // Update some component's value before it is saved.
   $component_id = 4;
-  $submission->data[$component_id]['value'][0] = 'foo';
+  $submission->data[$component_id][0] = 'foo';
 }
 
 /**
@@ -430,7 +430,17 @@ function hook_webform_component_info() {
       // If this component saves a file that can be used as an e-mail
       // attachment. Defaults to FALSE.
       'attachment' => FALSE,
+
+      // If this component reflects a time range and should use labels such as
+      // "Before" and "After" when exposed as filters in Views module.
+      'views_range' => FALSE,
     ),
+
+    // Specify the conditional behaviour of this component.
+    // Examples are 'string', 'date', 'time', 'numeric', 'select'.
+    // Defaults to 'string'.
+    'conditional_type' => 'string',
+
     'file' => 'components/textfield.inc',
   );
 
@@ -574,6 +584,19 @@ function _webform_attachments_component($component, $value) {
   return $files;
 }
 
+
+/**
+ * Alter default settings for a newly created webform node.
+ *
+ * @param array $defaults
+ *   Default settings for a newly created webform node as defined by webform_node_defaults().
+ *
+ * @see webform_node_defaults()
+ */
+function hook_webform_node_defaults_alter(&$defaults) {
+  $defaults['allow_draft'] = '1';
+}
+
 /**
  * @}
  */
@@ -597,7 +620,7 @@ function _webform_defaults_component() {
   return array(
     'name' => '',
     'form_key' => NULL,
-    'mandatory' => 0,
+    'required' => 0,
     'pid' => 0,
     'weight' => 0,
     'extra' => array(
@@ -636,7 +659,7 @@ function _webform_edit_component($component) {
     '#type' => 'textarea',
     '#title' => t('Options'),
     '#default_value' => $component['extra']['options'],
-    '#description' => t('Key-value pairs may be entered separated by pipes. i.e. safe_key|Some readable option') . theme('webform_token_help'),
+    '#description' => t('Key-value pairs may be entered separated by pipes. i.e. safe_key|Some readable option') . ' ' . theme('webform_token_help'),
     '#cols' => 60,
     '#rows' => 5,
     '#weight' => -3,
@@ -665,11 +688,11 @@ function _webform_edit_component($component) {
 function _webform_render_component($component, $value = NULL, $filter = TRUE) {
   $form_item = array(
     '#type' => 'textfield',
-    '#title' => $filter ? _webform_filter_xss($component['name']) : $component['name'],
-    '#required' => $component['mandatory'],
+    '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
+    '#required' => $component['required'],
     '#weight' => $component['weight'],
-    '#description'   => $filter ? _webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
-    '#default_value' => $filter ? _webform_filter_values($component['value']) : $component['value'],
+    '#description'   => $filter ? webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
+    '#default_value' => $filter ? webform_replace_tokens($component['value']) : $component['value'],
     '#prefix' => '<div class="webform-component-textfield" id="webform-component-' . $component['form_key'] . '">',
     '#suffix' => '</div>',
   );
@@ -679,6 +702,23 @@ function _webform_render_component($component, $value = NULL, $filter = TRUE) {
   }
 
   return $form_item;
+}
+
+/**
+ * Allow modules to modify a webform component that is going to be rendered in a form.
+ *
+ * @param array $element
+ *   The display element as returned by _webform_render_component().
+ * @param array $component
+ *   A Webform component array.
+ *
+ * @see _webform_render_component()
+ */
+function hook_webform_component_render_alter(&$element, &$component) {
+  if ($component['cid'] == 10) {
+    $element['#title'] = 'My custom title';
+    $element['#default_value'] = 42;
+  }
 }
 
 /**
@@ -720,6 +760,23 @@ function _webform_display_component($component, $value, $format = 'html') {
     '#format' => $format,
     '#value' => isset($value[0]) ? $value[0] : '',
   );
+}
+
+/**
+ * Allow modules to modify a "display only" webform component.
+ *
+ * @param array $element
+ *   The display element as returned by _webform_display_component().
+ * @param array $component
+ *   A Webform component array.
+ *
+ * @see _webform_display_component()
+ */
+function hook_webform_component_display_alter(&$element, &$component) {
+  if ($component['cid'] == 10) {
+    $element['#title'] = 'My custom title';
+    $element['#default_value'] = 42;
+  }
 }
 
 /**
@@ -926,7 +983,7 @@ function _webform_table_component($component, $value) {
 function _webform_csv_headers_component($component, $export_options) {
   $header = array();
   $header[0] = array('');
-  $header[1] = array($component['name']);
+  $header[1] = array($export_options['header_keys'] ? $component['form_key'] : $component['name']);
   $items = _webform_component_options($component['extra']['questions']);
   $count = 0;
   foreach ($items as $key => $item) {

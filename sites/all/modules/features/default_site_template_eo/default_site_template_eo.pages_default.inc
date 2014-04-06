@@ -17,7 +17,7 @@ function default_site_template_eo_default_page_manager_handlers() {
   $handler->task = 'site_template';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Default site template',
     'no_blocks' => 1,
@@ -28,6 +28,31 @@ function default_site_template_eo_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'newsletter' => 'newsletter',
+            ),
+          ),
+          'context' => 'node',
+          'not' => TRUE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '0',
+            'paths' => 'newsletter
+newsletter/*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'page_basic_eo';
@@ -550,15 +575,11 @@ function default_site_template_eo_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'user-search';
-    $pane->type = 'slac_search_redirect';
-    $pane->subtype = 'slac_search_redirect';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'text' => '',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

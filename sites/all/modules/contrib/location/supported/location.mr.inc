@@ -3,8 +3,7 @@
 // Mauritania
 
 function location_province_list_mr() {
-  return array(
-    'AD' => "Adrar",
+  return array('AD' => "Adrar",
     'AS' => "Assaba",
     'BR' => "Brakna",
     'DN' => "Dakhlet Nouadhibou",
@@ -16,8 +15,7 @@ function location_province_list_mr() {
     'TA' => "Tagant",
     'TZ' => "Tiris Zemmour",
     'TR' => "Trarza",
-    'NO' => "Nouakchott"
-  );
+    'NO' => "Nouakchott");
 }
 
 /**

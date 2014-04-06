@@ -3,8 +3,7 @@
 // Thailand
 
 function location_province_list_th() {
-  return array(
-    '10' => "Bangkok",
+  return array('10' => "Bangkok",
     '11' => "Samut Prakan",
     '12' => "Nonthaburi",
     '13' => "Pathum Thani",
@@ -80,8 +79,7 @@ function location_province_list_th() {
     '94' => "Pattani",
     '95' => "Yala",
     '96' => "Narathiwat",
-    'S' => "Pattaya"
-  );
+    'S' => "Pattaya");
 }
 
 /**

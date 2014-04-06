@@ -3,8 +3,7 @@
 // India
 
 function location_province_list_in() {
-  return array(
-    'AP' => "Andhra Pradesh",
+  return array('AP' => "Andhra Pradesh",
     'AR' => "Arunachal Pradesh",
     'AS' => "Assam",
     'BR' => "Bihar",
@@ -18,7 +17,7 @@ function location_province_list_in() {
     'KA' => "Karnataka",
     'KL' => "Kerala",
     'MP' => "Madhya Pradesh",
-    'MH' => "Maharashtra",
+    'MM' => "Maharashtra",
     'MN' => "Manipur",
     'ML' => "Meghalaya",
     'MZ' => "Mizoram",
@@ -38,8 +37,7 @@ function location_province_list_in() {
     'DD' => "Daman and Diu",
     'DL' => "Delhi",
     'LD' => "Lakshadweep",
-    'PY' => "Pondicherry"
-  );
+    'PY' => "Pondicherry");
 }
 
 /**

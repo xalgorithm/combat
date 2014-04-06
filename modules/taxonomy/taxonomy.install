@@ -642,6 +642,22 @@ function taxonomy_update_7005(&$sandbox) {
           'type' => 'int',
           'not null' => FALSE,
         ),
+        'status' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+        'status' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+        'status' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+        'status' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
         'is_current' => array(
           'type' => 'int',
           'unsigned' => TRUE,

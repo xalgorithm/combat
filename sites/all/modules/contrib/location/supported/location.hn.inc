@@ -3,8 +3,7 @@
 // Honduras
 
 function location_province_list_hn() {
-  return array(
-    'AT' => "Atlantida",
+  return array('AT' => "Atlantida",
     'CH' => "Choluteca",
     'CL' => "Colon",
     'CM' => "Comayagua",
@@ -21,8 +20,7 @@ function location_province_list_hn() {
     'OL' => "Olancho",
     'SB' => "Santa Barbara",
     'VA' => "Valle",
-    'YO' => "Yoro"
-  );
+    'YO' => "Yoro");
 }
 
 /**

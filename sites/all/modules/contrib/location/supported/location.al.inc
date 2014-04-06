@@ -3,8 +3,7 @@
 // Albania
 
 function location_province_list_al() {
-  return array(
-    'BR' => "Berat",
+  return array('BR' => "Berat",
     'BU' => "Bulqize",
     'DL' => "Delvine",
     'DV' => "Devoll",
@@ -39,8 +38,7 @@ function location_province_list_al() {
     'TE' => "Tepelene",
     'TP' => "Tropoje",
     'TR' => "Tirane",
-    'VL' => "Vlore"
-  );
+    'VL' => "Vlore");
 }
 
 /**

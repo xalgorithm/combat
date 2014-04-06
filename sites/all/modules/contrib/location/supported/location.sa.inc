@@ -3,8 +3,7 @@
 // Saudia Arabia
 
 function location_province_list_sa() {
-  return array(
-    'BH' => "Al Bahah",
+  return array('BH' => "Al Bahah",
     'HS' => "Al Hudud ash Shamaliyah",
     'JF' => "Al Jawf",
     'MD' => "Al Madinah",
@@ -16,8 +15,7 @@ function location_province_list_sa() {
     'JZ' => "Jizan",
     'ML' => "Makkah",
     'NR' => "Najran",
-    'TB' => "Tabuk"
-  );
+    'TB' => "Tabuk");
 }
 
 /**

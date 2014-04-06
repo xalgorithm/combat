@@ -3,8 +3,7 @@
 // Malta
 
 function location_province_list_mt() {
-  return array(
-    'ATT' => "Attard",
+  return array('ATT' => "Attard",
     'BAL' => "Balzan",
     'BGU' => "Birgu",
     'BKK' => "Birkirkara",
@@ -71,8 +70,7 @@ function location_province_list_mt() {
     'SNT' => "Sannat",
     'ZAG' => "Xagra",
     'XEW' => "Xewkija",
-    'ZEB' => "Zebbug"
-  );
+    'ZEB' => "Zebbug");
 }
 
 /**

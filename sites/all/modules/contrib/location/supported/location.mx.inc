@@ -3,8 +3,7 @@
 // Mexico
 
 function location_province_list_mx() {
-  return array(
-    'AGU' => "Aguascalientes",
+  return array('AGU' => "Aguascalientes",
     'BCN' => "Baja California",
     'BCS' => "Baja California Sur",
     'CAM' => "Campeche",
@@ -35,8 +34,7 @@ function location_province_list_mx() {
     'VER' => "Veracruz",
     'YUC' => "Yucatan",
     'ZAC' => "Zacatecas",
-    'DIF' => "Distrito Federal"
-  );
+    'DIF' => "Distrito Federal");
 }
 
 /**

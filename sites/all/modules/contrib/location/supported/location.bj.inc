@@ -3,8 +3,7 @@
 // Benin
 
 function location_province_list_bj() {
-  return array(
-    'AL' => "Alibori",
+  return array('AL' => "Alibori",
     'AK' => "Atakora",
     'AQ' => "Atlantique",
     'BO' => "Borgou",
@@ -15,8 +14,7 @@ function location_province_list_bj() {
     'MO' => "Mono",
     'OU' => "Oueme",
     'PL' => "Plateau",
-    'ZO' => "Zou"
-  );
+    'ZO' => "Zou");
 }
 
 /**

@@ -3,8 +3,7 @@
 // Iran, Islamic Republic Of
 
 function location_province_list_ir() {
-  return array(
-    'TEH' => "Tehran",
+  return array('TEH' => "Tehran",
     'QOM' => "Qom",
     'MKZ' => "Markazi",
     'QAZ' => "Qazvin",
@@ -33,8 +32,7 @@ function location_province_list_ir() {
     'GLS' => "Golestan",
     'NKH' => "North Khorasan",
     'RKH' => "Razavi Khorasan",
-    'SKH' => "South Khorasan"
-  );
+    'SKH' => "South Khorasan");
 }
 
 /**

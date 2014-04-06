@@ -4,12 +4,11 @@
  * @file Rules engine module
  */
 
-require_once 'modules/events.inc';
-
 /**
  * Implements hook_init().
  */
 function rules_init() {
+  module_load_include('inc', 'rules', 'modules/events');
   rules_invoke_event('init');
 }
 

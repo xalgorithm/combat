@@ -3,8 +3,7 @@
 // Nauru
 
 function location_province_list_nr() {
-  return array(
-    'AO' => "Aiwo",
+  return array('AO' => "Aiwo",
     'AA' => "Anabar",
     'AT' => "Anetan",
     'AI' => "Anibare",
@@ -17,8 +16,7 @@ function location_province_list_nr() {
     'ME' => "Meneng",
     'NI' => "Nibok",
     'UA' => "Uaboe",
-    'YA' => "Yaren"
-  );
+    'YA' => "Yaren");
 }
 
 /**

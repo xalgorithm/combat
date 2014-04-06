@@ -3,8 +3,7 @@
 // Morocco
 
 function location_province_list_ma() {
-  return array(
-    'AGD' => "Agadir",
+  return array('AGD' => "Agadir",
     'HOC' => "Al Hoceima",
     'AZI' => "Azilal",
     'BME' => "Beni Mellal",
@@ -45,8 +44,7 @@ function location_province_list_ma() {
     'TIZ' => "Tiznit",
     'ADK' => "Ad Dakhla",
     'BJD' => "Boujdour",
-    'ESM' => "Es Smara"
-  );
+    'ESM' => "Es Smara");
 }
 
 /**

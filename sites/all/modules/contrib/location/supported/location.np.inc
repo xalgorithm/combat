@@ -3,8 +3,7 @@
 // Nepal
 
 function location_province_list_np() {
-  return array(
-    'BA' => "Bagmati",
+  return array('BA' => "Bagmati",
     'BH' => "Bheri",
     'DH' => "Dhawalagiri",
     'GA' => "Gandaki",
@@ -17,8 +16,7 @@ function location_province_list_np() {
     'NA' => "Narayani",
     'RA' => "Rapti",
     'SA' => "Sagarmatha",
-    'SE' => "Seti"
-  );
+    'SE' => "Seti");
 }
 
 /**

@@ -796,6 +796,30 @@ function slac_event_views_default_views() {
 
   /* Display: Main content */
   $handler = $view->new_display('panel_pane', 'Main content', 'panel_pane_1');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  /* Filter criterion: Content: Event date -  start date (field_slac_event_date) */
+  $handler->display->display_options['filters']['field_slac_event_date_value']['id'] = 'field_slac_event_date_value';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['table'] = 'field_data_field_slac_event_date';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['field'] = 'field_slac_event_date_value';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['granularity'] = 'second';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['form_type'] = 'date_text';
+  $handler->display->display_options['filters']['field_slac_event_date_value']['default_date'] = 'now';
 
   /* Display: Calendar */
   $handler = $view->new_display('panel_pane', 'Calendar', 'panel_pane_2');
@@ -990,6 +1014,7 @@ function slac_event_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'date_ical';
   $handler->display->display_options['style_options']['uses_fields'] = TRUE;
   $handler->display->display_options['style_options']['cal_name'] = '';
+  $handler->display->display_options['style_options']['no_calname'] = TRUE;
   $handler->display->display_options['row_plugin'] = 'date_ical_fields';
   $handler->display->display_options['row_options']['date_field'] = 'field_slac_event_date';
   $handler->display->display_options['row_options']['title_field'] = 'title';

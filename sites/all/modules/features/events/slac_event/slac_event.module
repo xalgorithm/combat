@@ -18,6 +18,11 @@ function slac_event_preprocess_node(&$vars) {
     return;
   }
 
+  $vars['event_link'] = '';
+  if (isset($vars['field_slac_event_link']['und'][0]['url'])) {
+    $vars['event_link'] = $vars['field_slac_event_link']['und'][0]['url'];
+  }
+
   $previous_event_year_month_day = &drupal_static(__FUNCTION__ . '-previous_event_year_month_day', '');
   $row_counter = &drupal_static(__FUNCTION__ . '-row_counter', 1);
   if (isset($vars['view']->result)) {
@@ -158,6 +163,24 @@ function slac_event_entity_info_alter(&$entity_info) {
     'label' => 'Calendar teaser',
     'custom settings' => TRUE,
   );
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function slac_event_views_pre_view(&$view) {
+  $arg0 = arg(0);
+  $arg1 = arg(1);
+  if ($view->name == 'events' && $view->current_display == 'panel_pane_1') {
+    if ($arg0 == SLAC_EVENT_EVENTS_PAGE_URI && !empty($arg1)
+      && isset($view->display['panel_pane_1']->handler->options['filters']['field_slac_event_date_value'])) {
+      $view_filters = $view->display['panel_pane_1']->handler->options['filters'];
+      if (isset($view_filters['field_slac_event_date_value'])) {
+        unset($view_filters['field_slac_event_date_value']);
+      }
+      $view->display_handler->override_option('filters', $view_filters);
+    }
+  }
 }
 
 /**

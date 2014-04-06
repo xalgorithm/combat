@@ -3,8 +3,7 @@
 // Estonia
 
 function location_province_list_ee() {
-  return array(
-    '37' => "Harju County",
+  return array('37' => "Harju County",
     '39' => "Hiiu County",
     '44' => "Ida-Viru County",
     '49' => "Jõgeva County",
@@ -18,8 +17,7 @@ function location_province_list_ee() {
     '78' => "Tartu County",
     '82' => "Valga County",
     '84' => "Viljandi County",
-    '86' => "Võru County"
-  );
+    '86' => "Võru County");
 }
 
 /**

@@ -15,7 +15,7 @@ function _webform_defaults_date() {
     'pid' => 0,
     'weight' => 0,
     'value' => '',
-    'mandatory' => 0,
+    'required' => 0,
     'extra' => array(
       'timezone' => 'user',
       'start_date' => '-2 years',
@@ -121,15 +121,15 @@ function _webform_render_date($component, $value = NULL, $filter = TRUE) {
 
   $element = array(
     '#type' => 'date',
-    '#title' => $filter ? _webform_filter_xss($component['name']) : $component['name'],
+    '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
     '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#weight' => $component['weight'],
-    '#description' => $filter ? _webform_filter_descriptions($component['extra']['description'], $node) : $component['extra']['description'],
-    '#required' => $component['mandatory'],
+    '#description' => $filter ? webform_filter_descriptions($component['extra']['description'], $node) : $component['extra']['description'],
+    '#required' => $component['required'],
     '#start_date' => trim($component['extra']['start_date']),
     '#end_date' => trim($component['extra']['end_date']),
     '#year_textfield' => $component['extra']['year_textfield'],
-    '#default_value' => $filter ? _webform_filter_values($component['value'], $node, NULL, NULL, FALSE) : $component['value'],
+    '#default_value' => $filter ? webform_replace_tokens($component['value'], $node) : $component['value'],
     '#timezone' => $component['extra']['timezone'],
     '#process' => array('webform_expand_date'),
     '#theme' => 'webform_date',
@@ -416,7 +416,7 @@ function _webform_csv_headers_date($component, $export_options) {
   $header = array();
   $header[0] = '';
   $header[1] = '';
-  $header[2] = $component['name'];
+  $header[2] = $export_options['header_keys'] ? $component['form_key'] : $component['name'];
   return $header;
 }
 
@@ -426,7 +426,12 @@ function _webform_csv_headers_date($component, $export_options) {
 function _webform_csv_data_date($component, $export_options, $value) {
   if ($value[0]) {
     $timestamp = webform_strtotime($value[0]);
-    $format = webform_date_format('short');
+    if (!empty($export_options['iso8601_date'])) {
+      $format = 'Y-m-d'; // ISO 8601 date: 2004-02-12
+    }
+    else {
+      $format = webform_date_format('short');
+    }
     return format_date($timestamp, 'custom', $format, 'UTC');
   }
   else {

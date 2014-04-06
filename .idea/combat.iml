@@ -20,16 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="compass-library" level="project" />
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/sites/all/libraries/yotpo-php/yotpo.phar" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/sites/all/libraries/yotpo-php/yotpo.phar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
 

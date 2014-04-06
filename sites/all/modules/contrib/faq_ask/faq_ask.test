@@ -11,8 +11,8 @@
  */
 class Faq_AskTestCase extends DrupalWebTestCase {
 
-  protected $admin_user, $answer_user, $view_faq_user, $faq_user;
-  protected $taxonomy;
+  protected $admin_user, $answer_user, $answer_user2, $view_faq_user, $faq_user;
+  protected $taxonomy, $vocabulary;
   protected $term, $term1, $term2, $faq, $faq1, $faq2, $faq3, $faq4;
   protected $expert_role, $expert_roles;
 
@@ -29,11 +29,16 @@ class Faq_AskTestCase extends DrupalWebTestCase {
 
   /**
    * Implementation of setUp().
+   * Array of additional modules to be installed are passed as parameter
    */
-  function setUp() {
+  function setUp($modules = NULL) {
 
     // Install FAQ Module
-    parent::setUp('taxonomy', 'faq', 'faq_ask');
+    $module_list = array('taxonomy', 'faq', 'faq_ask');
+    if (!empty($modules))
+      $module_list = array_merge($module_list, $modules);
+
+    parent::setUp($module_list);
 
     // Create and log in user with administer taxonomy permissions.
     $this->admin_user = $this->drupalCreateUser(array('administer users', 'administer permissions', 'administer taxonomy', 'administer faq', 'administer faq order', 'administer blocks'));
@@ -41,10 +46,14 @@ class Faq_AskTestCase extends DrupalWebTestCase {
     $this->view_faq_user = $this->drupalCreateUser(array('view faq page', 'access content'));
     $this->ask_user = $this->drupalCreateUser(array('view faq page', 'ask question', 'create faq content', 'edit own faq content', 'view own unpublished content'));
     $this->answer_user = $this->drupalCreateUser(array('answer question', 'view faq page', 'edit any faq content'));
-    $roles = $this->answer_user->roles;
+    $this->answer_user2 = $this->drupalCreateUser(array('answer question', 'view faq page', 'edit any faq content'));
+    $roles = array_flip($this->answer_user->roles);
+    unset($roles['authenticated user']);
+    $this->answer_user2->roles = $roles = array_flip($roles);    // Add second user to the role of answering
     end($roles);
     $this->pass(print_r($roles, TRUE));
-    $this->expert_role = key($roles);  // Set to last role (the unique one)
+    $this->expert_role = key($roles);      // Set to last role (the unique one)
+    $this->pass(print_r($this->answer_user2, TRUE));
 
     $this->drupalLogin($this->admin_user);
 
@@ -71,7 +80,7 @@ class Faq_AskTestCase extends DrupalWebTestCase {
     $this->pass('<pre>' . print_r($this->answer_user, TRUE) . '</pre>');
     // Set expert role
     $settings = array(
-        'faq_expert_role[]' => key($roles),
+        'faq_expert_role[]' => $this->expert_role, // key($roles),
 //        'faq_category_field' => 'taxonomy_' . $this->vocabulary->machine_name,
         'faq_ask_vocabularies[]' => array($this->term->vid),
         );
@@ -178,8 +187,9 @@ class Faq_AskTestCase extends DrupalWebTestCase {
   function faqVerifyUrl($url, $msg) {
 
     $current_url = parse_url($this->getUrl());
-    if ($current_url['query'] == '') {
-      $this->assertEqual($current_url['path'], $url, $msg);
+    if (!isset($current_url['query']) || $current_url['query'] == '') {
+      $query = substr($current_url['path'], 1);  // Split off the "/" part
+      $this->assertEqual($query, $url, $msg);
     }
     else {
       $query = substr($current_url['query'], 2);  // Split off the q= part
@@ -222,6 +232,12 @@ class Faq_AskTestCase extends DrupalWebTestCase {
    * Values also stored in protected variable $tax
    */
   function setupTaxonomy() {
+
+    $old_vocab = '';
+    if (isset($this->vocabulary) && $this->vocabulary) {
+      $old_vocab = $this->vocabulary;
+    }
+
     // Create vocabulary.
     $this->vocabulary = $vocabulary = new stdClass();
     $vocabulary->name = $this->randomName(8);
@@ -231,6 +247,7 @@ class Faq_AskTestCase extends DrupalWebTestCase {
     $vocabulary->nodes = array('faq' => 'faq');
     $vocabulary->weight = mt_rand(0, 10);
     taxonomy_vocabulary_save($vocabulary);
+    $this->pass('<pre>' . print_r($vocabulary, TRUE) . '</pre>');
 
     $field = array(
       'field_name' => 'taxonomy_' . $this->vocabulary->machine_name,
@@ -287,6 +304,7 @@ class Faq_AskTestCase extends DrupalWebTestCase {
     $this->term2->vid = $vocabulary->vid;
     taxonomy_term_save($this->term1);
 
+
   }
 
   /**
@@ -326,6 +344,51 @@ class Faq_AskAccessTestClass extends Faq_AskTestCase {
     // Verify that the faq page is visible and available but empty
     $this->drupalGet('faq-page');
     $this->assertText(t('Frequently Asked Questions'), t('FAQ page is available for view faq page permissions.'));
+
+    /* Issue #161406: Categories not included in the FAQ list are showing up on the Expert Grid
+     * Verify that only the selected categories are visible in the experts page
+     */
+
+    $this->drupalLogin($this->admin_user);
+
+    $oldvocabvid = $this->vocabulary->vid;
+    $terms = array();  // Load all the terms from the vocabulary we're not supposed to see
+    foreach (taxonomy_term_load_multiple(array(), array('vid' => $oldvocabvid)) as $obj) {
+      $terms[] = $obj->name;
+    }
+
+    $this->setupTaxonomy();  // Save the old vocabulary and create another one
+
+    // faq_omit_vocabulary[1]
+
+    // Enable most recent vocab, but not the old one
+    $settings = array(
+    	'faq_omit_vocabulary[' . $oldvocabvid . ']' => TRUE,
+    	'faq_omit_vocabulary[' . $this->vocabulary->vid . ']' => FALSE
+    );
+    // Apply the setting
+    $this->drupalPost('admin/config/content/faq/categories', $settings, t('Save configuration'));
+
+    // faq_ask_vocabularies[]
+    $settings = array('faq_ask_vocabularies[]' => array($this->vocabulary->vid));  // Enable new vocabulary only
+    $this->setFaqAskSettings($settings);
+
+    // The terms from the old vocab should not be available
+    $this->pass('<pre>' . print_r($terms, TRUE) . '</pre>');
+    foreach ($terms as $term) {
+      $this->assertNoText($term, t('Term @term is not visible on the experts page', array('@term' => $term)));
+    }
+
+    // The terms from the new vocab should be available
+    $terms = array();  // Reset terms list
+    foreach (taxonomy_term_load_multiple(array(), array('vid' => $this->vocabulary->vid)) as $obj) {
+      $terms[] = $obj->name;
+    }
+
+    $this->pass('<pre>' . print_r($terms, TRUE) . '</pre>');
+    foreach ($terms as $term) {
+      $this->assertText($term, t('Term @term is visible on the experts page', array('@term' => $term)));
+    }
 
   }
 }
@@ -586,6 +649,9 @@ class CRAUDFaq_AskTestCase extends Faq_AskTestCase {
     // Verify expert notification
     // The email is sent in plain text. This means that <strong> and <i> are translated to * and /
 
+    $mails = $this->drupalGetMails(array('to' => $this->answer_user2->mail));
+    $this->pass('<pre>' . print_r($mails, TRUE) . '</pre>');    // Printout email
+
     $mails = $this->drupalGetMails(array('to' => $this->answer_user->mail));
     $mail = $mails[1];  // Check the last one
 
@@ -615,14 +681,18 @@ class CRAUDFaq_AskTestCase extends Faq_AskTestCase {
     $this->assertEqual(trim(str_replace(chr(10), ' ', $lines[6])), t('By clicking on the above question link you will be redirected to the login form if you are currently logged out.'), 'Seventh e-mail line: ' . $lines[6]);
 
     $this->verboseEmail(2);
+    $this->assertMail('to', $this->answer_user2->mail, t('E-mail was sent to expert 2: @mail', array('@mail' => $this->answer_user2->mail)));
     $this->assertMail('to', $this->answer_user->mail, t('E-mail was sent to expert: @mail', array('@mail' => $this->answer_user->mail)));
 
     // Verify that the answer question link is correct and works
-    $strings = explode('?q=', $lines[7]);
-    $token = explode('=', array_pop(explode('&', trim($strings[2]))));
-    $token_array = array(str_replace('amp;', '', $token[0]) => $token[1]);    // Should result in something like array('token' => 'vd1yS1Q2TQxBv9LQC7kTdzZxg-Ynl0lseAcHPkN18D8')
-    $answer_url = trim($strings[2]);
-    $answer_url_base = array_shift(explode('&', trim($strings[2]))); // Get the 'faq_ask/answer/2' - part
+    $url_array = explode('[2] ', $lines[7]);
+    $answer_url = trim($url_array[1]);
+    $url = parse_url($answer_url);
+    $this->pass('<pre>url_array:' . var_export($url, TRUE) . '</pre>');  // Show us the node loaded
+
+    $token = explode('=', $url['query']);
+    $token_array = array($token[0] => $token[1]);    // Should result in something like array('token' => 'vd1yS1Q2TQxBv9LQC7kTdzZxg-Ynl0lseAcHPkN18D8')
+    $answer_url_base = $url['path']; // Get the 'faq_ask/answer/2' - part
     $this->pass('<pre>' . var_export($answer_url_base, TRUE) . '</pre>');  // Show us the node loaded
     $this->pass('<pre>' . var_export($token_array, TRUE) . '</pre>');  // Show us the node loaded
     $answer_query = '';
@@ -902,3 +972,52 @@ class BlockFaq_AskTestCase extends Faq_AskTestCase {
   }
 
 }
+
+/**
+ * Test class to verify the existence and the functionality of the Mailchimp integration
+ * @author sten
+ *
+ */
+class Faq_askMailchimpTestCase extends Faq_AskTestCase {
+
+  /**
+  * Implementation of getInfo().
+  */
+  public static function getInfo() {
+    return array(
+        'name' => t('FAQ-Ask Mailchimp integration'),
+        'description' => t('Verifies the Mailchimp integration with FAQ-Ask functionality'),
+        'group' => t('FAQ-Ask'),
+    );
+  }
+
+  /**
+  * Implementation of setUp().
+  * Array of additional modules to be installed are passed as parameter
+  */
+  function setUp() {
+
+    // Add the mailchimp and the mailchimp_lists modules to the setup list
+    parent::setUp(array('mailchimp', 'mailchimp_lists'));
+
+  }
+
+  /**
+   * The actual testing function
+   */
+  function testMailChimpModule() {
+
+    $this->drupalLogin($this->admin_user);
+
+    // Enable asker notification
+    $this->setFaqAskSettings(array('faq_ask_asker_notify' => TRUE));
+
+    // Verify Mailchimp module is detected and installed
+    $this->assertText('Select a newsletter you want anonymous askers to be assigned to.', t('Verified newsletter description visible'));
+
+    // Post a question and verify Mailchimp module called.
+
+  }
+
+}
+

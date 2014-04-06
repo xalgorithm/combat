@@ -3,8 +3,7 @@
 // Cook Islands
 
 function location_province_list_ck() {
-  return array(
-    'PU' => "Pukapuka",
+  return array('PU' => "Pukapuka",
     'RK' => "Rakahanga",
     'MK' => "Manihiki",
     'PE' => "Penrhyn",
@@ -18,8 +17,7 @@ function location_province_list_ck() {
     'AT' => "Atiu",
     'MU' => "Mauke",
     'RR' => "Rarotonga",
-    'MG' => "Mangaia"
-  );
+    'MG' => "Mangaia");
 }
 
 /**

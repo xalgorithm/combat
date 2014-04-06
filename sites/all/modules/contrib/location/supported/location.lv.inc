@@ -3,8 +3,7 @@
 // Latvia
 
 function location_province_list_lv() {
-  return array(
-    'AIZ' => "Aizkraukles Rajons",
+  return array('AIZ' => "Aizkraukles Rajons",
     'ALU' => "Aluksnes Rajons",
     'BAL' => "Balvu Rajons",
     'BAU' => "Bauskas Rajons",
@@ -36,8 +35,7 @@ function location_province_list_lv() {
     'LPK' => "Liepaja",
     'RZK' => "Rezekne",
     'RGA' => "Riga",
-    'VSL' => "Ventspils"
-  );
+    'VSL' => "Ventspils");
 }
 
 /**

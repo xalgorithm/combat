@@ -9,7 +9,7 @@
       <option name="fileExtension" value="sass" />
       <option name="immediateSync" value="true" />
       <option name="name" value="compass sass" />
-      <option name="output" value="$PROJECT_DIR$/sites/all/themes/slac" />
+      <option name="output" value="$PROJECT_DIR$/sites/all/themes/ursus" />
       <option name="outputFilters">
         <array />
       </option>
@@ -18,10 +18,10 @@
       <option name="program" value="/Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/bin/compass" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="true" />
-      <option name="workingDir" value="$PROJECT_DIR$/sites/all/themes/slac" />
+      <option name="workingDir" value="$PROJECT_DIR$/sites/all/themes/ursus" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="--no-cache --update $FileName$:$FileNameWithoutExtension$.css" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" value="Compiles .sass files into .css files" />

@@ -3,8 +3,7 @@
 // Armenia
 
 function location_province_list_am() {
-  return array(
-    'AGT' => "Aragatsotn",
+  return array('AGT' => "Aragatsotn",
     'ARR' => "Ararat",
     'ARM' => "Armavir",
     'GEG' => "Geghark'unik'",
@@ -14,8 +13,7 @@ function location_province_list_am() {
     'SYU' => "Syunik'",
     'TAV' => "Tavush",
     'VAY' => "Vayots' Dzor",
-    'YER' => "Yerevan"
-  );
+    'YER' => "Yerevan");
 }
 
 /**

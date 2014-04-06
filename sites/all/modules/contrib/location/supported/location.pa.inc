@@ -3,8 +3,7 @@
 // Panama
 
 function location_province_list_pa() {
-  return array(
-    'BT' => "Bocas del Toro",
+  return array('BT' => "Bocas del Toro",
     'CH' => "Chiriqui",
     'CC' => "Cocle",
     'CL' => "Colon",
@@ -13,8 +12,7 @@ function location_province_list_pa() {
     'LS' => "Los Santos",
     'PA' => "Panama",
     'SB' => "San Blas",
-    'VG' => "Veraguas"
-  );
+    'VG' => "Veraguas");
 }
 
 /**

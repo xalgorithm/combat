@@ -3,8 +3,7 @@
 // Colombia
 
 function location_province_list_co() {
-  return array(
-    'AMZ' => "Amazonas",
+  return array('AMZ' => "Amazonas",
     'ANT' => "Antioquia",
     'ARA' => "Arauca",
     'ATL' => "Atlantico",
@@ -36,8 +35,7 @@ function location_province_list_co() {
     'VDC' => "Valle del Cauca",
     'VAU' => "Vaupes",
     'VIC' => "Vichada",
-    'BDC' => "Bogota D.C."
-  );
+    'BDC' => "Bogota D.C.");
 }
 
 /**

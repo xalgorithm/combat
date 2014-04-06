@@ -3,8 +3,7 @@
 // Mongolia
 
 function location_province_list_mn() {
-  return array(
-    '1' => "Ulanbaatar",
+  return array('1' => "Ulanbaatar",
     '035' => "Orhon",
     '037' => "Darhan uul",
     '039' => "Hentiy",
@@ -25,8 +24,7 @@ function location_province_list_mn() {
     '067' => "Bulgan",
     '069' => "Bayanhongor",
     '071' => "Bayan-Olgiy",
-    '073' => "Arhangay"
-  );
+    '073' => "Arhangay");
 }
 
 /**

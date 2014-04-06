@@ -23,93 +23,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_colors.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_colors.sass">
+      <file leaf-file-name="_layout.sass" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_layout.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="-0.0" vertical-offset="270" max-vertical-offset="960">
+            <state line="539" column="26" selection-start="9279" selection-end="9279" vertical-scroll-proportion="0.0970696" vertical-offset="8032" max-vertical-offset="40380">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_main_menu.sass" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass">
+      <file leaf-file-name="page-basic-eo.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic_eo/page-basic-eo.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.6216216" vertical-offset="870" max-vertical-offset="4830">
+            <state line="43" column="13" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass">
+      <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/bartik/templates/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="35" selection-start="3708" selection-end="3708" vertical-scroll-proportion="-46.875" vertical-offset="195" max-vertical-offset="20910">
-              <folding>
-                <element signature="e#367#461#0" expanded="false" />
-                <element signature="e#525#856#0" expanded="false" />
-                <element signature="e#862#952#0" expanded="false" />
-                <element signature="e#961#1133#0" expanded="false" />
-                <element signature="e#1568#1670#0" expanded="false" />
-                <element signature="e#1688#2041#0" expanded="false" />
-                <element signature="e#2121#2255#0" expanded="false" />
-                <element signature="e#2274#2349#0" expanded="false" />
-                <element signature="e#2372#2808#0" expanded="false" />
-                <element signature="e#2835#3047#0" expanded="false" />
-                <element signature="e#3081#3270#0" expanded="false" />
-                <element signature="e#3285#3350#0" expanded="false" />
-                <element signature="e#3858#4158#0" expanded="false" />
-                <element signature="e#4175#4725#0" expanded="false" />
-                <element signature="e#4801#5122#0" expanded="false" />
-                <element signature="e#5171#5260#0" expanded="false" />
-                <element signature="e#5288#5921#0" expanded="false" />
-                <element signature="e#5970#6147#0" expanded="false" />
-                <element signature="e#8743#8913#0" expanded="false" />
-                <element signature="e#8983#9548#0" expanded="false" />
-                <element signature="e#9583#9855#0" expanded="false" />
-                <element signature="e#9889#10835#0" expanded="false" />
-                <element signature="e#10935#10976#0" expanded="false" />
-                <element signature="e#11047#11788#0" expanded="false" />
-                <element signature="e#11953#13411#0" expanded="false" />
-                <element signature="e#13495#13845#0" expanded="false" />
-                <element signature="e#13864#15771#0" expanded="false" />
-                <element signature="e#15854#16673#0" expanded="false" />
-                <element signature="e#16826#16886#0" expanded="false" />
-                <element signature="e#16924#17134#0" expanded="false" />
-                <element signature="e#17165#17250#0" expanded="false" />
-                <element signature="e#17278#19039#0" expanded="false" />
-                <element signature="e#19062#19140#0" expanded="false" />
-                <element signature="e#19217#19384#0" expanded="false" />
-                <element signature="e#19399#19624#0" expanded="false" />
-                <element signature="e#19733#19779#0" expanded="false" />
-                <element signature="e#19968#20218#0" expanded="false" />
-                <element signature="e#20239#22165#0" expanded="false" />
-                <element signature="e#22255#22440#0" expanded="false" />
-                <element signature="e#22473#22748#0" expanded="false" />
-                <element signature="e#23459#23498#0" expanded="false" />
-                <element signature="e#23606#24210#0" expanded="false" />
-                <element signature="e#24244#24812#0" expanded="false" />
-                <element signature="e#25045#26264#0" expanded="false" />
-                <element signature="e#26353#26911#0" expanded="false" />
-                <element signature="e#26945#26999#0" expanded="false" />
-                <element signature="e#27533#27707#0" expanded="false" />
-                <element signature="e#27729#27866#0" expanded="false" />
-                <element signature="e#27945#27982#0" expanded="false" />
-                <element signature="e#28252#28470#0" expanded="false" />
-                <element signature="e#28562#29207#0" expanded="false" />
-                <element signature="e#29288#29421#0" expanded="false" />
-                <element signature="e#29460#29557#0" expanded="false" />
-                <element signature="e#29631#29816#0" expanded="false" />
-                <element signature="e#29844#29991#0" expanded="false" />
-                <element signature="e#30013#30062#0" expanded="false" />
-                <element signature="e#30092#30566#0" expanded="false" />
-                <element signature="e#30811#30964#0" expanded="false" />
-                <element signature="e#30992#31133#0" expanded="false" />
-                <element signature="e#31194#31352#0" expanded="false" />
-                <element signature="e#31395#31782#0" expanded="false" />
-                <element signature="e#31818#31880#0" expanded="false" />
-                <element signature="e#31937#31975#0" expanded="false" />
-              </folding>
+            <state line="114" column="7" selection-start="5501" selection-end="5529" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="3795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ursus.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/ursus.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="12" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1050">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_responsive_tablet.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_responsive_tablet.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="17" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="2535">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/styles.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1170">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,10 +88,31 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_colors.sass" />
-        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass" />
-        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass" />
         <option value="$PROJECT_DIR$/sites/all/themes/slac/css/styles.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_style_guide.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_responsive_tablet.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/slac.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/features/slac_page/slac_page.pages_default.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/features/slac_basic_page_settings/slac_basic_page_settings.strongarm.inc" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/plugins/layouts/page_basic/page-basic.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/plugins/layouts/page_basic_eo/page-basic-eo.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic/page-basic.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/template.php" />
+        <option value="$PROJECT_DIR$/sites/default/settings.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/sass/_form.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/sass/_colors.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/sass/_main_menu.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/sass/_slideshow.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic_eo/page-basic-eo.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ursus/sass/_layout.sass" />
       </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <option name="servers">
+      <server deployment_server="e8f52d37-76ef-4b09-bea9-6334d8741688" host="localhost" name="Mac Local" validation_dir="$PROJECT_DIR$/../TestDrupal" />
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="OS-X PHP">
@@ -168,7 +152,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,8 +201,26 @@
               <option name="myItemId" value="all" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="combat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="combat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,41 +242,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="slac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="combat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="combat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,47 +268,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="slac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="combat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="combat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
+              <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="settings" />
-    <property name="last_opened_file_path" value="/Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/bin/compass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sites/all/themes/ursus" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -356,6 +307,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ab29af5c-6fbd-4c63-8fd6-6adeabcb567c" name="Default" comment="" />
@@ -370,23 +338,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34583333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32733408" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -406,362 +374,271 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_colors.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/zen/templates/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/slac_basic_page_settings/slac_basic_page_settings.strongarm.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="20" selection-start="4244" selection-end="4244" vertical-scroll-proportion="0.33267328" vertical-offset="1212" max-vertical-offset="15675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/slac_int_org_frontpage/slac_int_org_frontpage.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="76" selection-start="6027" selection-end="6027" vertical-scroll-proportion="0.3484252" vertical-offset="1863" max-vertical-offset="5685" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/slac_ext_org_frontpage/slac_ext_org_frontpage.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="105" selection-start="7199" selection-end="7199" vertical-scroll-proportion="0.33333334" vertical-offset="2163" max-vertical-offset="5685" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/default_site_template_project/default_site_template_project.panels_default.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="37" selection-start="3304" selection-end="3304" vertical-scroll-proportion="0.34839925" vertical-offset="1735" max-vertical-offset="6810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/default_site_template_eo/default_site_template_eo.panels_default.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="37" selection-start="3294" selection-end="3294" vertical-scroll-proportion="0.12241054" vertical-offset="1855" max-vertical-offset="6810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/features/default_site_template/default_site_template.panels_default.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="37" selection-start="3288" selection-end="3288" vertical-scroll-proportion="3.6158192" vertical-offset="0" max-vertical-offset="3720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/screenshot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/html.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1045" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/maintenance-page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.958334" vertical-offset="599" max-vertical-offset="1620" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1081" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--slac_wiki_page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--slac_news.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--slac_faq--teaser.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--kb_article.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--event--teaser.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--event--calendar-teaser.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--blog.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="938" selection-start="8123" selection-end="8123" vertical-scroll-proportion="0.33235294" vertical-offset="479" max-vertical-offset="30465" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/field--field_prf_bio_tp--bio.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1081" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/field--field_prf_bio_pub--bio.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1081" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="51" selection-start="521" selection-end="522" vertical-scroll-proportion="-2.1086957" vertical-offset="1680" max-vertical-offset="2370" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic_eo/page_basic_eo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="716" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic_eo/page_basic_eo.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="716" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic/page-basic.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="72" selection-start="1688" selection-end="1688" vertical-scroll-proportion="-14.291667" vertical-offset="47" max-vertical-offset="750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col/two-col.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="716" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col/two_col.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="716" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col_article/two-col-article.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.375" vertical-offset="81" max-vertical-offset="750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col_events/two-col-events.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col_extorg/two_col_extorg.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="163" selection-end="163" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/templates/node--webform.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/theme-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.0" vertical-offset="576" max-vertical-offset="1245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="58" selection-start="7436" selection-end="7436" vertical-scroll-proportion="0.1605302" vertical-offset="2816" max-vertical-offset="3495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/two_col_extorg/two-col-extorg.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="62" selection-start="2063" selection-end="2063" vertical-scroll-proportion="1.1570828" vertical-offset="0" max-vertical-offset="945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/zen/theme-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.47151276" vertical-offset="240" max-vertical-offset="1995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/zen/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.7894737" vertical-offset="420" max-vertical-offset="10515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/adminimal_theme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17816092" vertical-offset="93" max-vertical-offset="615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bartik/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="7" selection-start="5501" selection-end="5529" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="3795">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/zen/zen.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="45" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4830">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/bartik/bartik.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/plugins/layouts/page_basic_eo/page-basic-eo.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="13" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_slideshow.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="35" selection-start="3708" selection-end="3708" vertical-scroll-proportion="0.0" vertical-offset="3225" max-vertical-offset="20415">
-          <folding>
-            <element signature="e#367#461#0" expanded="false" />
-            <element signature="e#525#856#0" expanded="false" />
-            <element signature="e#862#952#0" expanded="false" />
-            <element signature="e#961#1133#0" expanded="false" />
-            <element signature="e#1568#1670#0" expanded="false" />
-            <element signature="e#1688#2041#0" expanded="false" />
-            <element signature="e#2121#2255#0" expanded="false" />
-            <element signature="e#2274#2349#0" expanded="false" />
-            <element signature="e#2372#2808#0" expanded="false" />
-            <element signature="e#2835#3047#0" expanded="false" />
-            <element signature="e#3081#3270#0" expanded="false" />
-            <element signature="e#3285#3350#0" expanded="false" />
-            <element signature="e#3858#4158#0" expanded="false" />
-            <element signature="e#4175#4725#0" expanded="false" />
-            <element signature="e#4801#5122#0" expanded="false" />
-            <element signature="e#5171#5260#0" expanded="false" />
-            <element signature="e#5288#5921#0" expanded="false" />
-            <element signature="e#5970#6147#0" expanded="false" />
-            <element signature="e#8743#8913#0" expanded="false" />
-            <element signature="e#8983#9548#0" expanded="false" />
-            <element signature="e#9583#9855#0" expanded="false" />
-            <element signature="e#9889#10835#0" expanded="false" />
-            <element signature="e#10935#10976#0" expanded="false" />
-            <element signature="e#11047#11788#0" expanded="false" />
-            <element signature="e#11953#13411#0" expanded="false" />
-            <element signature="e#13495#13845#0" expanded="false" />
-            <element signature="e#13864#15771#0" expanded="false" />
-            <element signature="e#15854#16673#0" expanded="false" />
-            <element signature="e#16826#16886#0" expanded="false" />
-            <element signature="e#16924#17134#0" expanded="false" />
-            <element signature="e#17165#17250#0" expanded="false" />
-            <element signature="e#17278#19039#0" expanded="false" />
-            <element signature="e#19062#19140#0" expanded="false" />
-            <element signature="e#19217#19384#0" expanded="false" />
-            <element signature="e#19399#19624#0" expanded="false" />
-            <element signature="e#19733#19779#0" expanded="false" />
-            <element signature="e#19968#20218#0" expanded="false" />
-            <element signature="e#20239#22165#0" expanded="false" />
-            <element signature="e#22255#22440#0" expanded="false" />
-            <element signature="e#22473#22748#0" expanded="false" />
-            <element signature="e#23459#23498#0" expanded="false" />
-            <element signature="e#23606#24210#0" expanded="false" />
-            <element signature="e#24244#24812#0" expanded="false" />
-            <element signature="e#25045#26264#0" expanded="false" />
-            <element signature="e#26353#26911#0" expanded="false" />
-            <element signature="e#26945#26999#0" expanded="false" />
-            <element signature="e#27533#27707#0" expanded="false" />
-            <element signature="e#27729#27866#0" expanded="false" />
-            <element signature="e#27945#27982#0" expanded="false" />
-            <element signature="e#28252#28470#0" expanded="false" />
-            <element signature="e#28562#29207#0" expanded="false" />
-            <element signature="e#29288#29421#0" expanded="false" />
-            <element signature="e#29460#29557#0" expanded="false" />
-            <element signature="e#29631#29816#0" expanded="false" />
-            <element signature="e#29844#29991#0" expanded="false" />
-            <element signature="e#30013#30062#0" expanded="false" />
-            <element signature="e#30092#30566#0" expanded="false" />
-            <element signature="e#30811#30964#0" expanded="false" />
-            <element signature="e#30992#31133#0" expanded="false" />
-            <element signature="e#31194#31352#0" expanded="false" />
-            <element signature="e#31395#31782#0" expanded="false" />
-            <element signature="e#31818#31880#0" expanded="false" />
-            <element signature="e#31937#31975#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="92" column="26" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.6043956" vertical-offset="1050" max-vertical-offset="4110" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_responsive_large_desktop.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_main_menu.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="92" column="6" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="4830" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_form.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="14" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.54221386" vertical-offset="1376" max-vertical-offset="3720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_colors.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="11" selection-start="360" selection-end="360" vertical-scroll-proportion="0.34981686" vertical-offset="154" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/config.rb">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_style_guide.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1318681" vertical-offset="1164" max-vertical-offset="1710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/ursus.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="12" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_colors.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_responsive_tablet.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="960">
+        <state line="0" column="17" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="2535">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="313" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="4830">
+        <state line="2" column="17" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ursus/sass/_layout.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="489" column="11" selection-start="8481" selection-end="8485" vertical-scroll-proportion="0.0" vertical-offset="7343" max-vertical-offset="40260">
-          <folding>
-            <element signature="e#367#461#0" expanded="false" />
-            <element signature="e#525#856#0" expanded="false" />
-            <element signature="e#862#952#0" expanded="false" />
-            <element signature="e#961#1133#0" expanded="false" />
-            <element signature="e#1568#1670#0" expanded="false" />
-            <element signature="e#1688#2041#0" expanded="false" />
-            <element signature="e#2121#2255#0" expanded="false" />
-            <element signature="e#2274#2349#0" expanded="false" />
-            <element signature="e#2372#2808#0" expanded="false" />
-            <element signature="e#2835#3047#0" expanded="false" />
-            <element signature="e#3081#3270#0" expanded="false" />
-            <element signature="e#3285#3350#0" expanded="false" />
-            <element signature="e#3858#4158#0" expanded="false" />
-            <element signature="e#4175#4725#0" expanded="false" />
-            <element signature="e#4801#5122#0" expanded="false" />
-            <element signature="e#5171#5260#0" expanded="false" />
-            <element signature="e#5288#5921#0" expanded="false" />
-            <element signature="e#5970#6147#0" expanded="false" />
-            <element signature="e#8743#8913#0" expanded="false" />
-            <element signature="e#8983#9548#0" expanded="false" />
-            <element signature="e#9583#9855#0" expanded="false" />
-            <element signature="e#9889#10835#0" expanded="false" />
-            <element signature="e#10935#10976#0" expanded="false" />
-            <element signature="e#11047#11788#0" expanded="false" />
-            <element signature="e#11953#13411#0" expanded="false" />
-            <element signature="e#13495#13845#0" expanded="false" />
-            <element signature="e#13864#15771#0" expanded="false" />
-            <element signature="e#15854#16673#0" expanded="false" />
-            <element signature="e#16826#16886#0" expanded="false" />
-            <element signature="e#16924#17134#0" expanded="false" />
-            <element signature="e#17165#17250#0" expanded="false" />
-            <element signature="e#17278#19039#0" expanded="false" />
-            <element signature="e#19062#19140#0" expanded="false" />
-            <element signature="e#19217#19384#0" expanded="false" />
-            <element signature="e#19399#19624#0" expanded="false" />
-            <element signature="e#19733#19779#0" expanded="false" />
-            <element signature="e#19968#20218#0" expanded="false" />
-            <element signature="e#20239#22165#0" expanded="false" />
-            <element signature="e#22255#22440#0" expanded="false" />
-            <element signature="e#22473#22748#0" expanded="false" />
-            <element signature="e#23459#23498#0" expanded="false" />
-            <element signature="e#23606#24210#0" expanded="false" />
-            <element signature="e#24244#24812#0" expanded="false" />
-            <element signature="e#25045#26264#0" expanded="false" />
-            <element signature="e#26353#26911#0" expanded="false" />
-            <element signature="e#26945#26999#0" expanded="false" />
-            <element signature="e#27533#27707#0" expanded="false" />
-            <element signature="e#27729#27866#0" expanded="false" />
-            <element signature="e#27945#27982#0" expanded="false" />
-            <element signature="e#28252#28470#0" expanded="false" />
-            <element signature="e#28562#29207#0" expanded="false" />
-            <element signature="e#29288#29421#0" expanded="false" />
-            <element signature="e#29460#29557#0" expanded="false" />
-            <element signature="e#29631#29816#0" expanded="false" />
-            <element signature="e#29844#29991#0" expanded="false" />
-            <element signature="e#30013#30062#0" expanded="false" />
-            <element signature="e#30092#30566#0" expanded="false" />
-            <element signature="e#30811#30964#0" expanded="false" />
-            <element signature="e#30992#31133#0" expanded="false" />
-            <element signature="e#31194#31352#0" expanded="false" />
-            <element signature="e#31395#31782#0" expanded="false" />
-            <element signature="e#31818#31880#0" expanded="false" />
-            <element signature="e#31937#31975#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_blocks.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/templates/html.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="848" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/templates/maintenance-page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/css/styles.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="848" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_style_guide.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="144" selection-end="144" vertical-scroll-proportion="0.17139333" vertical-offset="26" max-vertical-offset="1710" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_blocks.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/styles.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_reset.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0012135922" vertical-offset="1" max-vertical-offset="825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_colors.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1653" column="33" selection-start="202330" selection-end="202330" vertical-scroll-proportion="0.33270678" vertical-offset="24618" max-vertical-offset="30465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/omega/omega/css/omega-text.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_responsive_large_desktop.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/omega/omega/css/omega-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/omega/omega/css/omega-forms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/omega/omega/css/omega-branding.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_layout.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="35" selection-start="3708" selection-end="3708" vertical-scroll-proportion="-46.875" vertical-offset="195" max-vertical-offset="20910">
-          <folding>
-            <element signature="e#367#461#0" expanded="false" />
-            <element signature="e#525#856#0" expanded="false" />
-            <element signature="e#862#952#0" expanded="false" />
-            <element signature="e#961#1133#0" expanded="false" />
-            <element signature="e#1568#1670#0" expanded="false" />
-            <element signature="e#1688#2041#0" expanded="false" />
-            <element signature="e#2121#2255#0" expanded="false" />
-            <element signature="e#2274#2349#0" expanded="false" />
-            <element signature="e#2372#2808#0" expanded="false" />
-            <element signature="e#2835#3047#0" expanded="false" />
-            <element signature="e#3081#3270#0" expanded="false" />
-            <element signature="e#3285#3350#0" expanded="false" />
-            <element signature="e#3858#4158#0" expanded="false" />
-            <element signature="e#4175#4725#0" expanded="false" />
-            <element signature="e#4801#5122#0" expanded="false" />
-            <element signature="e#5171#5260#0" expanded="false" />
-            <element signature="e#5288#5921#0" expanded="false" />
-            <element signature="e#5970#6147#0" expanded="false" />
-            <element signature="e#8743#8913#0" expanded="false" />
-            <element signature="e#8983#9548#0" expanded="false" />
-            <element signature="e#9583#9855#0" expanded="false" />
-            <element signature="e#9889#10835#0" expanded="false" />
-            <element signature="e#10935#10976#0" expanded="false" />
-            <element signature="e#11047#11788#0" expanded="false" />
-            <element signature="e#11953#13411#0" expanded="false" />
-            <element signature="e#13495#13845#0" expanded="false" />
-            <element signature="e#13864#15771#0" expanded="false" />
-            <element signature="e#15854#16673#0" expanded="false" />
-            <element signature="e#16826#16886#0" expanded="false" />
-            <element signature="e#16924#17134#0" expanded="false" />
-            <element signature="e#17165#17250#0" expanded="false" />
-            <element signature="e#17278#19039#0" expanded="false" />
-            <element signature="e#19062#19140#0" expanded="false" />
-            <element signature="e#19217#19384#0" expanded="false" />
-            <element signature="e#19399#19624#0" expanded="false" />
-            <element signature="e#19733#19779#0" expanded="false" />
-            <element signature="e#19968#20218#0" expanded="false" />
-            <element signature="e#20239#22165#0" expanded="false" />
-            <element signature="e#22255#22440#0" expanded="false" />
-            <element signature="e#22473#22748#0" expanded="false" />
-            <element signature="e#23459#23498#0" expanded="false" />
-            <element signature="e#23606#24210#0" expanded="false" />
-            <element signature="e#24244#24812#0" expanded="false" />
-            <element signature="e#25045#26264#0" expanded="false" />
-            <element signature="e#26353#26911#0" expanded="false" />
-            <element signature="e#26945#26999#0" expanded="false" />
-            <element signature="e#27533#27707#0" expanded="false" />
-            <element signature="e#27729#27866#0" expanded="false" />
-            <element signature="e#27945#27982#0" expanded="false" />
-            <element signature="e#28252#28470#0" expanded="false" />
-            <element signature="e#28562#29207#0" expanded="false" />
-            <element signature="e#29288#29421#0" expanded="false" />
-            <element signature="e#29460#29557#0" expanded="false" />
-            <element signature="e#29631#29816#0" expanded="false" />
-            <element signature="e#29844#29991#0" expanded="false" />
-            <element signature="e#30013#30062#0" expanded="false" />
-            <element signature="e#30092#30566#0" expanded="false" />
-            <element signature="e#30811#30964#0" expanded="false" />
-            <element signature="e#30992#31133#0" expanded="false" />
-            <element signature="e#31194#31352#0" expanded="false" />
-            <element signature="e#31395#31782#0" expanded="false" />
-            <element signature="e#31818#31880#0" expanded="false" />
-            <element signature="e#31937#31975#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/slac/sass/_main_menu.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.6216216" vertical-offset="870" max-vertical-offset="4830">
+        <state line="539" column="26" selection-start="9279" selection-end="9279" vertical-scroll-proportion="0.0970696" vertical-offset="8032" max-vertical-offset="40380">
           <folding />
         </state>
       </provider>

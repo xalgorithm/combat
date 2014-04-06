@@ -3,8 +3,7 @@
 // Angola
 
 function location_province_list_ao() {
-  return array(
-    'BGO' => "Bengo",
+  return array('BGO' => "Bengo",
     'BGU' => "Benguela province",
     'BIE' => "Bie",
     'CAB' => "Cabinda",
@@ -21,8 +20,7 @@ function location_province_list_ao() {
     'MOX' => "Moxico",
     'NAM' => "Namibe",
     'UIG' => "Uige",
-    'ZAI' => "Zaire"
-  );
+    'ZAI' => "Zaire");
 }
 
 /**

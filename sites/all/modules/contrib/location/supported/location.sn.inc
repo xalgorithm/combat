@@ -3,8 +3,7 @@
 // Senegal
 
 function location_province_list_sn() {
-  return array(
-    'DA' => "Dakar",
+  return array('DA' => "Dakar",
     'DI' => "Diourbel",
     'FA' => "Fatick",
     'KA' => "Kaolack",
@@ -14,8 +13,7 @@ function location_province_list_sn() {
     'SL' => "Saint-Louis",
     'TA' => "Tambacounda",
     'TH' => "Thies",
-    'ZI' => "Ziguinchor"
-  );
+    'ZI' => "Ziguinchor");
 }
 
 /**

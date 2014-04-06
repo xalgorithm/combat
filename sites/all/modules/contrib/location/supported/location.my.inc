@@ -3,8 +3,7 @@
 // Malaysia
 
 function location_province_list_my() {
-  return array(
-    'JH' => "Johor",
+  return array('JH' => "Johor",
     'KD' => "Kedah",
     'KN' => "Kelantan",
     'KL' => "Kuala Lumpur",
@@ -20,8 +19,7 @@ function location_province_list_my() {
     'TR' => "Terengganu",
     'LB' => "Labuan",
     'SB' => "Sabah",
-    'SR' => "Sarawak"
-  );
+    'SR' => "Sarawak");
 }
 
 /**

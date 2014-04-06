@@ -87,6 +87,9 @@ function pp_lightbox_theme() {
 
 
 function theme_image_style_lightbox($variables) {
+  // Disable image zoom.
+  variable_set('lightbox2_disable_zoom', TRUE);
+
   $image_style = $variables['style_name'];
   $file = $variables['file'];
 
@@ -158,6 +161,10 @@ function theme_image_style_lightbox($variables) {
 
   // Create image caption.
   $caption = '<p>' . implode('</p><p>', array_filter(array($title, $description))) . '</p>';
+
+  // Replace new line with '<br>'
+  // otherwise the caption will be null (Lightbox 2 module restriction).
+  $caption = preg_replace("/[\r\n]+/", '<br>', $caption);
 
   $rendered_image_as_link = l($rendered_image, $image_url, array('attributes' => array('rel' => 'lightbox[inline_image][' . $caption . $rendered_link . ']'), 'html' => TRUE));
 

@@ -3,8 +3,7 @@
 // Palau
 
 function location_province_list_pw() {
-  return array(
-    'AM' => "Aimeliik",
+  return array('AM' => "Aimeliik",
     'AR' => "Airai",
     'AN' => "Angaur",
     'HA' => "Hatohobei",
@@ -19,8 +18,7 @@ function location_province_list_pw() {
     'NR' => "Ngeremlengui",
     'NW' => "Ngiwal",
     'PE' => "Peleliu",
-    'SO' => "Sonsorol"
-  );
+    'SO' => "Sonsorol");
 }
 
 /**

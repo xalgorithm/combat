@@ -3,8 +3,7 @@
 // Rwanda
 
 function location_province_list_rw() {
-  return array(
-    'BU' => "Butare",
+  return array('BU' => "Butare",
     'BY' => "Byumba",
     'CY' => "Cyangugu",
     'GK' => "Gikongoro",
@@ -15,8 +14,7 @@ function location_province_list_rw() {
     'KR' => "Kigali Rurale",
     'KV' => "Kigali-ville",
     'RU' => "Ruhengeri",
-    'UM' => "Umutara"
-  );
+    'UM' => "Umutara");
 }
 
 /**

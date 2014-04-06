@@ -454,6 +454,8 @@ function slac_event_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'action',
@@ -551,6 +553,7 @@ function slac_event_default_page_manager_pages() {
       'inner_right' => NULL,
       'inner_title' => NULL,
       'social_media' => NULL,
+      'right_sidebar' => NULL,
     ),
   );
   $display->cache = array();

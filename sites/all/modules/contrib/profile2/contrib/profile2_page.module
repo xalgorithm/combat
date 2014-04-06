@@ -110,6 +110,7 @@ function profile2_page_menu() {
       }
     }
   }
+
   return $items;
 }
 

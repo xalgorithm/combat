@@ -3,8 +3,7 @@
 // Seychelles
 
 function location_province_list_sc() {
-  return array(
-    'AP' => "Anse aux Pins",
+  return array('AP' => "Anse aux Pins",
     'AB' => "Anse Boileau",
     'AE' => "Anse Etoile",
     'AL' => "Anse Louis",
@@ -26,8 +25,7 @@ function location_province_list_sc() {
     'PR' => "Pointe La Rue",
     'PG' => "Port Glaud",
     'SL' => "Saint Louis",
-    'TA' => "Takamaka"
-  );
+    'TA' => "Takamaka");
 }
 
 /**

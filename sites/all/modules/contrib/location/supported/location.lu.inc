@@ -3,8 +3,7 @@
 // Luxembourg
 
 function location_province_list_lu() {
-  return array(
-    'DD' => "Diekirch",
+  return array('DD' => "Diekirch",
     'DC' => "Clervaux",
     'DR' => "Redange",
     'DV' => "Vianden",
@@ -15,8 +14,7 @@ function location_province_list_lu() {
     'LL' => "Luxembourg",
     'LC' => "Capellen",
     'LE' => "Esch-sur-Alzette",
-    'LM' => "Mersch"
-  );
+    'LM' => "Mersch");
 }
 
 /**

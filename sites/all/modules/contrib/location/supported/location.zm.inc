@@ -3,8 +3,7 @@
 // Zambia
 
 function location_province_list_zm() {
-  return array(
-    'CE' => "Central Province",
+  return array('CE' => "Central Province",
     'CB' => "Copperbelt Province",
     'EA' => "Eastern Province",
     'LP' => "Luapula Province",
@@ -12,8 +11,7 @@ function location_province_list_zm() {
     'NO' => "Northern Province",
     'NW' => "North-Western Province",
     'SO' => "Southern Province",
-    'WE' => "Western Province"
-  );
+    'WE' => "Western Province");
 }
 
 /**

@@ -3,8 +3,7 @@
 // Cuba
 
 function location_province_list_cu() {
-  return array(
-    'IJU' => "Isla de la Juventud",
+  return array('IJU' => "Isla de la Juventud",
     'PRI' => "Pinar del Rio",
     'LHA' => "La Habana",
     'CLH' => "Ciudad de La Habana",
@@ -18,8 +17,7 @@ function location_province_list_cu() {
     'GRA' => "Granma",
     'HOL' => "Holguin",
     'SCU' => "Santiago de Cuba",
-    'GUA' => "Guantanamo"
-  );
+    'GUA' => "Guantanamo");
 }
 
 /**

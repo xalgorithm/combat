@@ -3,8 +3,7 @@
 // Mali
 
 function location_province_list_ml() {
-  return array(
-    'GA' => "Gao",
+  return array('GA' => "Gao",
     'KY' => "Kayes",
     'KD' => "Kidal",
     'KL' => "Koulikoro",
@@ -12,8 +11,7 @@ function location_province_list_ml() {
     'SG' => "Segou",
     'SK' => "Sikasso",
     'TB' => "Tombouctou",
-    'CD' => "Bamako Capital District"
-  );
+    'CD' => "Bamako Capital District");
 }
 
 /**

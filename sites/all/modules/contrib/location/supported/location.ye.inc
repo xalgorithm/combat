@@ -3,8 +3,7 @@
 // Yemen
 
 function location_province_list_ye() {
-  return array(
-    'AB' => "Abyan",
+  return array('AB' => "Abyan",
     'AD' => "Adan",
     'AM' => "Amran",
     'BA' => "Al Bayda",
@@ -22,8 +21,7 @@ function location_province_list_ye() {
     'SD' => "Sa'dah",
     'SN' => "San'a",
     'SH' => "Shabwah",
-    'TA' => "Ta'izz"
-  );
+    'TA' => "Ta'izz");
 }
 
 /**

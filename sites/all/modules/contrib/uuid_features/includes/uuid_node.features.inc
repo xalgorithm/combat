@@ -9,23 +9,19 @@
  */
 function uuid_node_features_export_options() {
   $options = array();
-  // Check what content types are enabled for uuid features export.
-  $types = variable_get('uuid_features_entity_node', FALSE);
-  if (!empty($types)) {
-    $query = db_select('node', 'n');
-    $query->fields('n', array('nid', 'title', 'type', 'uuid'))
-      ->condition('type', $types)
-      ->orderBy('type')
-      ->orderBy('title');
-    $nodes = $query->execute()->fetchAll();
-    foreach ($nodes as $node) {
-      $options[$node->uuid] = t('@type: @title', array(
-        '@type' => $types[$node->type],
-        '@title' => $node->title,
-      ));
-    }
+
+  $types = node_type_get_names();
+
+  $query = 'SELECT n.nid, n.title, n.type, n.uuid
+    FROM {node} n ORDER BY n.type, n.title ASC';
+  $results = db_query($query);
+  foreach ($results as $node) {
+    $options[$node->uuid] = t('@type: @title', array(
+      '@type' => $types[$node->type],
+      '@title' => $node->title,
+    ));
   }
-  drupal_alter('uuid_node_features_export_options', $options);
+
   return $options;
 }
 
@@ -146,6 +142,9 @@ function uuid_node_features_rebuild($module) {
   // Import the terms first.
   uuid_term_features_rebuild($module);
 
+  variable_set('menu_rebuild_needed', FALSE);
+  lock_acquire('menu_rebuild');
+
   $nodes = module_invoke($module, 'uuid_features_default_content');
   if (!empty($nodes)) {
     module_load_include('inc', 'node', 'node.pages');
@@ -193,4 +192,5 @@ function uuid_node_features_rebuild($module) {
       node_save($node);
     }
   }
+  lock_release('menu_rebuild');
 }

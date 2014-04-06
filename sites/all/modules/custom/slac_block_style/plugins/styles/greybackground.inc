@@ -17,10 +17,6 @@ $plugin = array(
  * @ingroup themeable
  */
 function theme_slac_block_style_greybackground_style_render_pane($vars) {
-  if (is_array($vars['content']->content) && $vars['content']->type == 'fieldable_panels_pane') {
-    return;
-  }
-
   if (isset($vars['content']->title) && $vars['content']->content) {
     if (is_array($vars['content']->content)) {
       $content = drupal_render($vars['content']->content);
@@ -28,9 +24,9 @@ function theme_slac_block_style_greybackground_style_render_pane($vars) {
     else {
       $content = $vars['content']->content;
     }
-
+    $pane_settings_css_class = isset($vars['pane']->css['css_class']) ? $vars['pane']->css['css_class'] : '';
     $output = '';
-    $output .= '<div class="panel-pane region-grey-background-style">';
+    $output .= '<div class="panel-pane region-grey-background-style ' . $pane_settings_css_class . '">';
     $output .= '<h2 class="panel-title panel-title-grey-background-style">' . $vars['content']->title . '</h2>';
     $output .= '<div class="pane-body-grey-background-style">' . $content . '</div>';
     $output .= '</div>';

@@ -3,8 +3,7 @@
 // Egypt
 
 function location_province_list_eg() {
-  return array(
-    'DHY' => "Ad Daqahliyah",
+  return array('DHY' => "Ad Daqahliyah",
     'BAM' => "Al Bahr al Ahmar",
     'BHY' => "Al Buhayrah",
     'FYM' => "Al Fayyum",
@@ -29,8 +28,7 @@ function location_province_list_eg() {
     'MAT' => "Matruh",
     'QIN' => "Qina",
     'SHS' => "Shamal Sina'",
-    'SUH' => "Suhaj"
-  );
+    'SUH' => "Suhaj");
 }
 
 /**

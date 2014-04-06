@@ -154,7 +154,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_ask_notify_asker';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['faq_ask_notify_asker'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -189,7 +189,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_ask_notify_by_cron';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['faq_ask_notify_by_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -204,7 +204,7 @@ function slac_faq_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_ask_vocabularies';
   $strongarm->value = array(
-    11 => '11',
+    5 => '5',
   );
   $export['faq_ask_vocabularies'] = $strongarm;
 
@@ -330,16 +330,16 @@ function slac_faq_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'detailed_question' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -365,9 +365,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_faq';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_faq'] = $strongarm;
 
   $strongarm = new stdClass();

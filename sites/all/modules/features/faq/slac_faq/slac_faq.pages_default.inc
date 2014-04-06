@@ -13,7 +13,7 @@ function slac_faq_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context_7';
+  $handler->name = 'node_view_panel_context_8';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -65,14 +65,20 @@ function slac_faq_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'left';
-    $pane->type = 'node_body';
-    $pane->subtype = 'node_body';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_question_details';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Question details',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -86,6 +92,28 @@ function slac_faq_default_page_manager_handlers() {
     $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'left';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Answer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'left';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -104,12 +132,12 @@ function slac_faq_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['left'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'left';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -127,12 +155,12 @@ function slac_faq_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['left'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'left_author';
     $pane->type = 'node_author_sp';
     $pane->subtype = 'node_author_sp';
@@ -155,10 +183,10 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left_author'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['left_author'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'left_author';
     $pane->type = 'node_created';
     $pane->subtype = 'node_created';
@@ -178,10 +206,10 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left_author'][1] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['left_author'][1] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -202,18 +230,19 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left_title'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['left_title'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'slac_faq-panel_pane_1';
+    $pane->subtype = 'faq_category-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '10',
+      'override_title' => 1,
+      'override_title_text' => 'Categories',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -224,12 +253,12 @@ function slac_faq_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context_7'] = $handler;
+  $export['node_view_panel_context_8'] = $handler;
 
   return $export;
 }
@@ -249,15 +278,9 @@ function slac_faq_default_page_manager_pages() {
   $page->access = array(
     'plugins' => array(
       0 => array(
-        'name' => 'role',
+        'name' => 'perm',
         'settings' => array(
-          'rids' => array(
-            0 => 2,
-            1 => 6,
-            2 => 5,
-            3 => 3,
-            4 => 4,
-          ),
+          'perm' => 'ask question',
         ),
         'context' => 'logged-in-user',
         'not' => FALSE,
@@ -299,6 +322,67 @@ function slac_faq_default_page_manager_pages() {
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['add_new_faq'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'edit_faq_s';
+  $page->task = 'page';
+  $page->admin_title = 'Edit FAQ\'s';
+  $page->admin_description = '';
+  $page->path = 'faq/edit-questions';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 6,
+            1 => 5,
+            2 => 3,
+            3 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'action',
+    'title' => 'Edit/Answer Questions',
+    'name' => 'navigation',
+    'weight' => '2',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_edit_faq_s_http_response';
+  $handler->task = 'page';
+  $handler->subtask = 'edit_faq_s';
+  $handler->handler = 'http_response';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'HTTP response code',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'admin/config/faq/edit-questions',
+  );
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['edit_faq_s'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
@@ -360,7 +444,15 @@ function slac_faq_default_page_manager_pages() {
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
-    'relationships' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Taxonomy vocabulary from Taxonomy term (on taxonomy_term_data.vocabulary)',
+        'keyword' => 'taxonomy_vocabulary',
+        'name' => 'entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary',
+        'context' => 'argument_term_1',
+        'id' => 1,
+      ),
+    ),
     'access' => array(
       'plugins' => array(),
       'logic' => 'and',
@@ -433,12 +525,13 @@ function slac_faq_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'slac_faq-panel_pane_1';
+    $pane->subtype = 'faq_category-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '10',
+      'override_title' => 1,
+      'override_title_text' => 'Categories',
     );
     $pane->cache = array();
     $pane->style = array(

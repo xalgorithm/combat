@@ -3,8 +3,7 @@
 // Malawi
 
 function location_province_list_mw() {
-  return array(
-    'BLK' => "Balaka",
+  return array('BLK' => "Balaka",
     'BLT' => "Blantyre",
     'CKW' => "Chikwawa",
     'CRD' => "Chiradzulu",
@@ -30,8 +29,7 @@ function location_province_list_mw() {
     'RMP' => "Rumphi",
     'SLM' => "Salima",
     'THY' => "Thyolo",
-    'ZBA' => "Zomba"
-  );
+    'ZBA' => "Zomba");
 }
 
 /**

@@ -3,8 +3,7 @@
 // Guatemala
 
 function location_province_list_gt() {
-  return array(
-    'AV' => "Alta Verapaz",
+  return array('AV' => "Alta Verapaz",
     'BV' => "Baja Verapaz",
     'CM' => "Chimaltenango",
     'CQ' => "Chiquimula",
@@ -25,8 +24,7 @@ function location_province_list_gt() {
     'SO' => "Solola",
     'SU' => "Suchitepequez",
     'TO' => "Totonicapan",
-    'ZA' => "Zacapa"
-  );
+    'ZA' => "Zacapa");
 }
 
 /**
