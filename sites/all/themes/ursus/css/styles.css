@@ -370,7 +370,7 @@ ul.sf-menu.sf-accordion.sf-expanded > li > ul a:after { display: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_main_menu\.sass}line{font-family:\00003316}}
   .main-menu.long-menu ul li:first-child { margin-left: 17px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\000032}}
-a { color: #b9d0df; text-decoration: none; }
+a { color: #276cbd; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\000035}}
 a:hover { color: #276cbd; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\000039}}
@@ -485,7 +485,7 @@ ul.tabs, .action-links { font-size: 0.75em; margin-bottom: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\00003215}}
 ul.tabs li, .action-links li { float: left; margin-right: 10px; margin-bottom: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\00003219}}
-ul.tabs li a, .action-links li a { /*background-color: $grey-a */ padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
+ul.tabs li a, .action-links li a { background-color: #aaaaaa; padding: 6px 12px; color: white; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/xalg\/Sites\/combat\/sites\/all\/themes\/ursus\/sass\/_layout\.sass}line{font-family:\00003225}}
 ul.tabs li a:hover, .action-links li a:hover { background-color: #2e2e2e; }
 

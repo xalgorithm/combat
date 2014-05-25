@@ -6,3 +6,4 @@
 [Tue Mar 11 14:25:58 2014] [error] (2)No such file or directory: could not open transfer log file /Users/xalg/Sites/slac-featureslogs/access_log.
 [Wed Mar 26 10:02:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/slac-features/user
 [Wed Mar 26 10:02:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/slac-features/favicon.ico
+[Sat May 24 14:11:41 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/combat/favicon.ico
