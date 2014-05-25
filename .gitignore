@@ -4,8 +4,12 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
+logs
 logs/*
 
 FirePHPCore
 *.sass-cache
+.idea
+.idea/*
+excludes
+.DS_*
