@@ -695,7 +695,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.',
+    'description' => 'Please enter the link of the event, i.e. http://medieval-combat.org/tournaments/ User will be REDIRECTED to this page instead of viewing the event on this site.',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'hidden',
@@ -967,7 +967,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)',
+    'description' => 'Please enter an area of expertise for this event ',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'above',
@@ -1024,7 +1024,7 @@ function slac_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_scientific_area',
-    'label' => 'Event Scientific Area',
+    'label' => 'Event Type',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1083,14 +1083,14 @@ function slac_event_field_default_field_instances() {
   t('Description');
   t('Event Color');
   t('Event Organization');
-  t('Event Scientific Area');
   t('Event Series');
+  t('Event Type');
   t('Event date');
   t('Image');
   t('Location');
-  t('Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)');
+  t('Please enter an area of expertise for this event ');
   t('Please enter the date for the event, please specify an end date. Event can span across multiple days.');
-  t('Please enter the link of the event, i.e. https://conf-slac.stanford.edu/ixs-2013/Welcome. User will be REDIRECTED to this page instead of viewing the event on this site.');
+  t('Please enter the link of the event, i.e. http://medieval-combat.org/tournaments/ User will be REDIRECTED to this page instead of viewing the event on this site.');
   t('Redirect event link');
   t('Related links');
 

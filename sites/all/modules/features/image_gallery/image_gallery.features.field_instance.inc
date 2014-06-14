@@ -16,6 +16,12 @@ function image_gallery_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'galleryformatter',
@@ -24,7 +30,7 @@ function image_gallery_field_default_field_instances() {
           'link_to_full_style' => 'large',
           'linking_method' => 'onclick_full',
           'modal' => 'colorbox',
-          'slide_style' => 'galleryformatter_slide',
+          'slide_style' => 'galleryformater_slide_2',
           'style' => 'Greenarrows',
           'thumb_style' => 'galleryformatter_thumb',
         ),
@@ -55,12 +61,12 @@ function image_gallery_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 31,
     ),
   );

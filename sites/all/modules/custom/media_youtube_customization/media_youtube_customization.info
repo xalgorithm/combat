@@ -1,7 +1,0 @@
-name = Media Youtube Customization
-description = Media Youtube customization
-package = Propeople
-core = 7.x
-
-dependencies[] = file_entity
-dependencies[] = media_youtube

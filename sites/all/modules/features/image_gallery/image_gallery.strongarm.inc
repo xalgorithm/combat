@@ -86,6 +86,21 @@ function image_gallery_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'calendar_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -94,6 +109,9 @@ function image_gallery_strongarm() {
         ),
         'path' => array(
           'weight' => '30',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(),

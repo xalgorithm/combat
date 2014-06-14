@@ -7,3 +7,94 @@
 [Wed Mar 26 10:02:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/slac-features/user
 [Wed Mar 26 10:02:03 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/slac-features/favicon.ico
 [Sat May 24 14:11:41 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/combat/favicon.ico
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/86/edit
+[Sun Jun 01 22:06:32 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/86/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:10:54 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:14:12 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/user/22/profile-contact/edit
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/event
+[Sun Jun 01 22:27:29 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/add/event
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:37 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:35:49 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:37:48 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function media_access() in /Users/xalg/Sites/combat/sites/all/modules/contrib/media_youtube/includes/MediaYouTubeBrowser.inc on line 19, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP   1. {main}() /Users/xalg/Sites/combat/index.php:0, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP   2. menu_execute_active_handler() /Users/xalg/Sites/combat/index.php:21, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP   3. call_user_func_array() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP   4. media_browser() /Users/xalg/Sites/combat/includes/menu.inc:517, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:05 2014] [error] [client 127.0.0.1] PHP   5. MediaYouTubeBrowser->access() /Users/xalg/Sites/combat/sites/all/modules/contrib/media/includes/media.browser.inc:63, referer: http://combat/node/add/page
+[Sun Jun 01 22:39:36 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/combat/favicon.ico
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP Warning:  PDO::__construct(): MySQL server has gone away in /Users/xalg/Sites/combat/includes/database/database.inc on line 304
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP Stack trace:
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   1. _drupal_exception_handler() /Users/xalg/Sites/combat/includes/bootstrap.inc:0
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   2. _drupal_log_error() /Users/xalg/Sites/combat/includes/bootstrap.inc:2331
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   3. drupal_maintenance_theme() /Users/xalg/Sites/combat/includes/errors.inc:179
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   4. _drupal_maintenance_theme() /Users/xalg/Sites/combat/includes/bootstrap.inc:2571
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   5. list_themes() /Users/xalg/Sites/combat/includes/theme.maintenance.inc:57
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   6. _system_rebuild_theme_data() /Users/xalg/Sites/combat/includes/theme.inc:798
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   7. module_invoke_all() /Users/xalg/Sites/combat/modules/system/system.module:2497
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   8. module_implements() /Users/xalg/Sites/combat/includes/module.inc:892
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP   9. cache_get() /Users/xalg/Sites/combat/includes/module.inc:723
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  10. DrupalDatabaseCache->get() /Users/xalg/Sites/combat/includes/cache.inc:56
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  11. DrupalDatabaseCache->getMultiple() /Users/xalg/Sites/combat/includes/cache.inc:325
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  12. db_escape_table() /Users/xalg/Sites/combat/includes/cache.inc:344
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  13. Database::getConnection() /Users/xalg/Sites/combat/includes/database/database.inc:2567
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  14. Database::openConnection() /Users/xalg/Sites/combat/includes/database/database.inc:1476
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  15. DatabaseConnection_mysql->__construct() /Users/xalg/Sites/combat/includes/database/database.inc:1686
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  16. DatabaseConnection->__construct() /Users/xalg/Sites/combat/includes/database/mysql/database.inc:51
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  17. PDO->__construct() /Users/xalg/Sites/combat/includes/database/database.inc:304
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  18. _drupal_error_handler() /Users/xalg/Sites/combat/includes/database/database.inc:304
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  19. _drupal_error_handler_real() /Users/xalg/Sites/combat/includes/bootstrap.inc:2313
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  20. _drupal_log_error() /Users/xalg/Sites/combat/includes/errors.inc:75
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  21. watchdog() /Users/xalg/Sites/combat/includes/errors.inc:202
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  22. module_implements() /Users/xalg/Sites/combat/includes/bootstrap.inc:1734
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  23. cache_get() /Users/xalg/Sites/combat/includes/module.inc:723
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  24. DrupalDatabaseCache->get() /Users/xalg/Sites/combat/includes/cache.inc:56
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  25. DrupalDatabaseCache->getMultiple() /Users/xalg/Sites/combat/includes/cache.inc:325
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  26. db_escape_table() /Users/xalg/Sites/combat/includes/cache.inc:344
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  27. Database::getConnection() /Users/xalg/Sites/combat/includes/database/database.inc:2567
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  28. Database::openConnection() /Users/xalg/Sites/combat/includes/database/database.inc:1476
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  29. DatabaseConnection_mysql->__construct() /Users/xalg/Sites/combat/includes/database/database.inc:1686
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  30. DatabaseConnection->__construct() /Users/xalg/Sites/combat/includes/database/mysql/database.inc:51
+[Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  31. PDO->__construct() /Users/xalg/Sites/combat/includes/database/database.inc:304
+[Sat Jun 14 11:11:29 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/combat/favicon.ico

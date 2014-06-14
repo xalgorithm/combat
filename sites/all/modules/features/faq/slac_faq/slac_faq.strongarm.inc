@@ -91,7 +91,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_answer_category_name';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['faq_answer_category_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -233,7 +233,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_count';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['faq_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -256,7 +256,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_group_questions_top';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['faq_group_questions_top'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -271,17 +271,19 @@ function slac_faq_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_omit_vocabulary';
   $strongarm->value = array(
-    1 => '1',
-    8 => '8',
-    9 => '9',
-    10 => '10',
-    5 => '5',
-    6 => '6',
     2 => '2',
+    6 => '6',
+    7 => '7',
+    8 => '8',
+    1 => '1',
     3 => '3',
     4 => '4',
-    7 => '7',
+    5 => '5',
+    10 => '10',
+    9 => '9',
+    13 => 0,
     11 => 0,
+    12 => 0,
   );
   $export['faq_omit_vocabulary'] = $strongarm;
 
@@ -365,7 +367,9 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_faq';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'status',
+  );
   $export['node_options_faq'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -408,37 +412,12 @@ function slac_faq_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'teaser' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
       ),
-      'rss' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'ical' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'diff_standard' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'calendar_teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
@@ -460,26 +439,6 @@ function slac_faq_strongarm() {
         'choice' => 0,
       ),
       'default' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'ical' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'diff_standard' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
