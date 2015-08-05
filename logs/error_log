@@ -98,3 +98,4 @@
 [Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  30. DatabaseConnection->__construct() /Users/xalg/Sites/combat/includes/database/mysql/database.inc:51
 [Tue Jun 03 20:21:12 2014] [error] [client 127.0.0.1] PHP  31. PDO->__construct() /Users/xalg/Sites/combat/includes/database/database.inc:304
 [Sat Jun 14 11:11:29 2014] [error] [client 127.0.0.1] File does not exist: /Users/xalg/Sites/combat/favicon.ico
+[Thu Oct 23 15:19:46.893162 2014] [:error] [pid 73140] [client 127.0.0.1:55028] PHP Warning:  PDO::__construct(): MySQL server has gone away in /Users/xalg/Sites/combat/includes/database/database.inc on line 307
