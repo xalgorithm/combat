@@ -20,7 +20,7 @@ Drupal.wysiwyg.plugins.media = {
    *   A DOM element
    */
   isNode: function(node) {
-    return $(node).is('img.media-element');
+    return $(node).is('img[data-media-element]');
   },
 
   /**
@@ -79,7 +79,7 @@ Drupal.wysiwyg.plugins.media = {
  * inserting a media element into the WYSIWYG.
  * Keeps track of the WYSIWYG instance id.
  */
-InsertMedia = function (instance_id) {
+var InsertMedia = function (instance_id) {
   this.instanceId = instance_id;
   return this;
 };
@@ -110,15 +110,12 @@ InsertMedia.prototype = {
    * tagmap.
    */
   insert: function (formatted_media) {
-    var attributes = Drupal.media.filter.parseAttributeFields(formatted_media.options);
-
     var element = Drupal.media.filter.create_element(formatted_media.html, {
           fid: this.mediaFile.fid,
           view_mode: formatted_media.type,
-          attributes: $.extend(this.mediaFile.attributes, attributes),
+          attributes: formatted_media.options,
           fields: formatted_media.options
         });
-
     // Get the markup and register it for the macro / placeholder handling.
     var markup = Drupal.media.filter.getWysiwygHTML(element);
 
