@@ -27,13 +27,14 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'name' => 'name',
-    'tid' => 'tid',
+    'nid' => 'nid',
   );
   /* Relationship: Taxonomy term: Content using Category */
   $handler->display->display_options['relationships']['reverse_field_faq_category_node']['id'] = 'reverse_field_faq_category_node';
@@ -106,16 +107,16 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: COUNT(Taxonomy term: Term ID) */
-  $handler->display->display_options['fields']['tid']['id'] = 'tid';
-  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['tid']['field'] = 'tid';
-  $handler->display->display_options['fields']['tid']['group_type'] = 'count';
-  $handler->display->display_options['fields']['tid']['label'] = '';
-  $handler->display->display_options['fields']['tid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['tid']['alter']['text'] = '([tid])';
-  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: COUNT(DISTINCT Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'reverse_field_faq_category_node';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count_distinct';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '([nid])';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -123,30 +124,44 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
     'faq_categories' => 'faq_categories',
   );
-  /* Filter criterion: Content: Status (field_status) */
-  $handler->display->display_options['filters']['field_status_value']['id'] = 'field_status_value';
-  $handler->display->display_options['filters']['field_status_value']['table'] = 'field_data_field_status';
-  $handler->display->display_options['filters']['field_status_value']['field'] = 'field_status_value';
-  $handler->display->display_options['filters']['field_status_value']['relationship'] = 'reverse_field_faq_category_node';
-  $handler->display->display_options['filters']['field_status_value']['value'] = array(
-    'open' => 'open',
-  );
+  $handler->display->display_options['filters']['machine_name']['group'] = 1;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['relationship'] = 'reverse_field_faq_category_node';
   $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_faq_category_node';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
     'faq' => 'faq',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Status (field_status) */
+  $handler->display->display_options['filters']['field_status_value']['id'] = 'field_status_value';
+  $handler->display->display_options['filters']['field_status_value']['table'] = 'field_data_field_status';
+  $handler->display->display_options['filters']['field_status_value']['field'] = 'field_status_value';
+  $handler->display->display_options['filters']['field_status_value']['relationship'] = 'reverse_field_faq_category_node';
+  $handler->display->display_options['filters']['field_status_value']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+    'open' => 'open',
+  );
+  $handler->display->display_options['filters']['field_status_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_status_value']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['pane_category']['name'] = 'SLAC FAQ';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -312,20 +327,23 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '11';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Category (field_faq_category) */
   $handler->display->display_options['relationships']['field_faq_category_tid']['id'] = 'field_faq_category_tid';
   $handler->display->display_options['relationships']['field_faq_category_tid']['table'] = 'field_data_field_faq_category';
   $handler->display->display_options['relationships']['field_faq_category_tid']['field'] = 'field_faq_category_tid';
+  /* Relationship: Comment: Comments of the node */
+  $handler->display->display_options['relationships']['cid']['id'] = 'cid';
+  $handler->display->display_options['relationships']['cid']['table'] = 'node';
+  $handler->display->display_options['relationships']['cid']['field'] = 'cid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -357,6 +375,7 @@ function slac_faq_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = 'Answer';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Name */
   $handler->display->display_options['arguments']['name']['id'] = 'name';

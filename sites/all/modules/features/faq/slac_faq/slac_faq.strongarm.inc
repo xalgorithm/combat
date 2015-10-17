@@ -14,7 +14,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_faq';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-comment';
   $export['additional_settings__active_tab_faq'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,7 +63,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_faq';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_faq'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -91,7 +91,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_answer_category_name';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['faq_answer_category_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -233,7 +233,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_count';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['faq_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -249,6 +249,9 @@ function slac_faq_strongarm() {
   $strongarm->name = 'faq_expert_role';
   $strongarm->value = array(
     6 => '6',
+    3 => '3',
+    4 => '4',
+    5 => '5',
   );
   $export['faq_expert_role'] = $strongarm;
 
@@ -256,7 +259,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_group_questions_top';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['faq_group_questions_top'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -271,19 +274,17 @@ function slac_faq_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'faq_omit_vocabulary';
   $strongarm->value = array(
-    2 => '2',
-    6 => '6',
-    7 => '7',
-    8 => '8',
     1 => '1',
+    8 => '8',
+    9 => '9',
+    10 => '10',
+    5 => '5',
+    6 => '6',
+    2 => '2',
     3 => '3',
     4 => '4',
-    5 => '5',
-    10 => '10',
-    9 => '9',
-    13 => 0,
+    7 => '7',
     11 => 0,
-    12 => 0,
   );
   $export['faq_omit_vocabulary'] = $strongarm;
 
@@ -367,9 +368,7 @@ function slac_faq_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_faq';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_faq'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -439,6 +438,26 @@ function slac_faq_strongarm() {
         'choice' => 0,
       ),
       'default' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'full' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'ical' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'diff_standard' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'token' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

@@ -1,5 +1,0 @@
-name = Webauth
-description = Provides access to webauth login functionality
-package = SLAC
-core = 7.x
-version = 7.x-1.0
