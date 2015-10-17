@@ -58,10 +58,11 @@ function slac_people_listing_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = 'Profile Overview';
+  $display->uuid = '2db6bd70-7fcb-4efe-beb9-44bcd587ffcd';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-72caf4be-4553-46f0-94a7-28be51ddc51a';
     $pane->panel = 'left';
     $pane->type = 'slac_profile_complete';
     $pane->subtype = 'slac_profile_complete';
@@ -80,10 +81,11 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = '72caf4be-4553-46f0-94a7-28be51ddc51a';
+    $display->content['new-72caf4be-4553-46f0-94a7-28be51ddc51a'] = $pane;
+    $display->panels['left'][0] = 'new-72caf4be-4553-46f0-94a7-28be51ddc51a';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-2a9aa672-416c-41d9-bd89-ec462a9829c5';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'profile_user_elements_extorg-panel_pane_4';
@@ -104,10 +106,11 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = '2a9aa672-416c-41d9-bd89-ec462a9829c5';
+    $display->content['new-2a9aa672-416c-41d9-bd89-ec462a9829c5'] = $pane;
+    $display->panels['left'][1] = 'new-2a9aa672-416c-41d9-bd89-ec462a9829c5';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-3b824146-cd72-4487-bea9-2f0d99fd1dad';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -128,10 +131,11 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left_title'][0] = 'new-3';
+    $pane->uuid = '3b824146-cd72-4487-bea9-2f0d99fd1dad';
+    $display->content['new-3b824146-cd72-4487-bea9-2f0d99fd1dad'] = $pane;
+    $display->panels['left_title'][0] = 'new-3b824146-cd72-4487-bea9-2f0d99fd1dad';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-c0a31ac6-3ff7-4b72-be40-71eb0b137e2e';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'profile_user_elements_extorg-panel_pane_1';
@@ -152,10 +156,11 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][0] = 'new-4';
+    $pane->uuid = 'c0a31ac6-3ff7-4b72-be40-71eb0b137e2e';
+    $display->content['new-c0a31ac6-3ff7-4b72-be40-71eb0b137e2e'] = $pane;
+    $display->panels['right'][0] = 'new-c0a31ac6-3ff7-4b72-be40-71eb0b137e2e';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-71d43763-1add-43fc-9459-73a09ffbf337';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'profile_user_elements_extorg-panel_pane_2';
@@ -176,10 +181,11 @@ function slac_people_listing_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][1] = 'new-5';
+    $pane->uuid = '71d43763-1add-43fc-9459-73a09ffbf337';
+    $display->content['new-71d43763-1add-43fc-9459-73a09ffbf337'] = $pane;
+    $display->panels['right'][1] = 'new-71d43763-1add-43fc-9459-73a09ffbf337';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-72caf4be-4553-46f0-94a7-28be51ddc51a';
   $handler->conf['display'] = $display;
   $export['user_view_panel_context_2'] = $handler;
 
@@ -198,7 +204,10 @@ function slac_people_listing_default_page_manager_pages() {
   $page->admin_title = 'People Listing page';
   $page->admin_description = '';
   $page->path = 'people/!letter';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'People',
@@ -272,10 +281,11 @@ function slac_people_listing_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'People Listing: All';
+  $display->uuid = 'c62a9ece-891e-4d9e-b092-2cc095407142';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-5f6c2349-173f-40e0-b295-f46bbc68e6b3';
     $pane->panel = 'content';
     $pane->type = 'views_panes';
     $pane->subtype = 'people_listing-panel_pane_1';
@@ -290,10 +300,11 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['content'][0] = 'new-1';
+    $pane->uuid = '5f6c2349-173f-40e0-b295-f46bbc68e6b3';
+    $display->content['new-5f6c2349-173f-40e0-b295-f46bbc68e6b3'] = $pane;
+    $display->panels['content'][0] = 'new-5f6c2349-173f-40e0-b295-f46bbc68e6b3';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-8f5c3913-47c6-4e35-a9cf-a752a8a15b43';
     $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -314,10 +325,11 @@ function slac_people_listing_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['title'][0] = 'new-2';
+    $pane->uuid = '8f5c3913-47c6-4e35-a9cf-a752a8a15b43';
+    $display->content['new-8f5c3913-47c6-4e35-a9cf-a752a8a15b43'] = $pane;
+    $display->panels['title'][0] = 'new-8f5c3913-47c6-4e35-a9cf-a752a8a15b43';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-5f6c2349-173f-40e0-b295-f46bbc68e6b3';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['people_listing_page'] = $page;

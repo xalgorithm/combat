@@ -123,7 +123,188 @@ function slac_event_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-date_repeat_entity_clone_state'
+  $field_instances['node-event-date_repeat_entity_clone_state'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'date_repeat_entity_clone_state',
+    'label' => 'Clone state (do not change)',
+    'required' => FALSE,
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-date_repeat_entity_master_uuid'
+  $field_instances['node-event-date_repeat_entity_master_uuid'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'date_repeat_entity_master_uuid',
+    'label' => 'Master UUID (do not change)',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_attachment'
+  $field_instances['node-event-field_attachment'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 16,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_attachment',
+    'label' => 'Attachment',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => '',
+      'file_extensions' => 'txt pdf ppt pptx png jpg gif tif doc docx keynote xls xlsx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 3,
     ),
   );
 
@@ -260,6 +441,64 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_tags'
+  $field_instances['node-event-field_event_tags'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Arbitrary tags to assist in the creation of event feeds which only provide events with certain tags.',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 13,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_tags',
+    'label' => 'Event tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_location'
   $field_instances['node-event-field_location'] = array(
     'bundle' => 'event',
@@ -333,7 +572,7 @@ function slac_event_field_default_field_instances() {
       'module' => 'location_cck',
       'settings' => array(),
       'type' => 'location',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -412,7 +651,7 @@ function slac_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -481,7 +720,7 @@ function slac_event_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_category',
     'label' => 'Event Series',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -490,7 +729,7 @@ function slac_event_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -569,7 +808,7 @@ function slac_event_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -686,7 +925,7 @@ function slac_event_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -695,7 +934,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the link of the event, i.e. http://medieval-combat.org/tournaments/ User will be REDIRECTED to this page instead of viewing the event on this site.',
+    'description' => 'Inserting a URL in this field will cause the node to redirect to the given link.',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'hidden',
@@ -759,7 +998,7 @@ function slac_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_link',
-    'label' => 'Redirect event link',
+    'label' => 'Redirect link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -865,7 +1104,7 @@ function slac_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -967,7 +1206,7 @@ function slac_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter an area of expertise for this event ',
+    'description' => 'Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)',
     'display' => array(
       'calendar_teaser' => array(
         'label' => 'above',
@@ -1024,7 +1263,7 @@ function slac_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slac_event_scientific_area',
-    'label' => 'Event Type',
+    'label' => 'Event Scientific Area',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1037,7 +1276,7 @@ function slac_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1077,21 +1316,26 @@ function slac_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Arbitrary tags to assist in the creation of event feeds which only provide events with certain tags.');
+  t('Attachment');
   t('Audience');
+  t('Clone state (do not change)');
   t('Comment');
   t('Contact');
   t('Description');
   t('Event Color');
   t('Event Organization');
+  t('Event Scientific Area');
   t('Event Series');
-  t('Event Type');
   t('Event date');
+  t('Event tags');
   t('Image');
+  t('Inserting a URL in this field will cause the node to redirect to the given link.');
   t('Location');
-  t('Please enter an area of expertise for this event ');
+  t('Master UUID (do not change)');
+  t('Please enter an area of expertise for this event such as "Photon, X-ray" (If applicable)');
   t('Please enter the date for the event, please specify an end date. Event can span across multiple days.');
-  t('Please enter the link of the event, i.e. http://medieval-combat.org/tournaments/ User will be REDIRECTED to this page instead of viewing the event on this site.');
-  t('Redirect event link');
+  t('Redirect link');
   t('Related links');
 
   return $field_instances;
