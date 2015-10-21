@@ -113,6 +113,9 @@ function image_gallery_strongarm() {
         'metatags' => array(
           'weight' => '40',
         ),
+        'locations' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

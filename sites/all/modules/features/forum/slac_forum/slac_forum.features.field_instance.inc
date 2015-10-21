@@ -10,7 +10,7 @@
 function slac_forum_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-forum-body'
+  // Exported field_instance: 'node-forum-body'.
   $field_instances['node-forum-body'] = array(
     'bundle' => 'forum',
     'default_value' => NULL,
@@ -61,7 +61,7 @@ function slac_forum_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-forum-taxonomy_forums'
+  // Exported field_instance: 'node-forum-taxonomy_forums'.
   $field_instances['node-forum-taxonomy_forums'] = array(
     'bundle' => 'forum',
     'default_value' => NULL,

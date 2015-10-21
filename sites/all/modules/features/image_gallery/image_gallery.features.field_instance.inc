@@ -10,7 +10,7 @@
 function image_gallery_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-gallery-field_gallery_image'
+  // Exported field_instance: 'node-gallery-field_gallery_image'.
   $field_instances['node-gallery-field_gallery_image'] = array(
     'bundle' => 'gallery',
     'deleted' => 0,

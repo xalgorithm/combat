@@ -38,6 +38,7 @@ features[page_manager_handlers][] = term_view_panel_context_2
 features[page_manager_pages][] = add_a_new_blog_post_
 features[page_manager_pages][] = blog_archive
 features[taxonomy][] = blog_categories
+features[taxonomy][] = slac_blog_tags
 features[variable][] = additional_settings__active_tab_blog
 features[variable][] = comment_anonymous_blog
 features[variable][] = comment_blog

@@ -59,10 +59,11 @@ function slac_page_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = 'c1a919c1-e8b1-4ec6-acef-45011b0d569e';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-9ed94c15-1f5d-443a-af36-c45e60d9dea5';
     $pane->panel = 'left';
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
@@ -89,10 +90,11 @@ function slac_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = '9ed94c15-1f5d-443a-af36-c45e60d9dea5';
+    $display->content['new-9ed94c15-1f5d-443a-af36-c45e60d9dea5'] = $pane;
+    $display->panels['left'][0] = 'new-9ed94c15-1f5d-443a-af36-c45e60d9dea5';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-646adb3a-8987-46b1-8d7a-5a8acacd737b';
     $pane->panel = 'left_title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -113,10 +115,11 @@ function slac_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left_title'][0] = 'new-2';
+    $pane->uuid = '646adb3a-8987-46b1-8d7a-5a8acacd737b';
+    $display->content['new-646adb3a-8987-46b1-8d7a-5a8acacd737b'] = $pane;
+    $display->panels['left_title'][0] = 'new-646adb3a-8987-46b1-8d7a-5a8acacd737b';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-e070bbe9-acdc-4110-b01f-93d378779974';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -141,10 +144,11 @@ function slac_page_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $pane->uuid = 'e070bbe9-acdc-4110-b01f-93d378779974';
+    $display->content['new-e070bbe9-acdc-4110-b01f-93d378779974'] = $pane;
+    $display->panels['right'][0] = 'new-e070bbe9-acdc-4110-b01f-93d378779974';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-e070bbe9-acdc-4110-b01f-93d378779974';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_6'] = $handler;
 

@@ -10,7 +10,53 @@
 function slac_event_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_event_image'
+  // Exported field_base: 'date_repeat_entity_clone_state'.
+  $field_bases['date_repeat_entity_clone_state'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'date_repeat_entity_clone_state',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'date_repeat_entity_master_uuid'.
+  $field_bases['date_repeat_entity_master_uuid'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'date_repeat_entity_master_uuid',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_event_image'.
   $field_bases['field_event_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -19,14 +65,6 @@ function slac_event_field_default_field_bases() {
     'field_name' => 'field_event_image',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -44,7 +82,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_field_slac_event_color'
+  // Exported field_base: 'field_field_slac_event_color'.
   $field_bases['field_field_slac_event_color'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -54,7 +92,6 @@ function slac_event_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'rgb' => array(
         0 => 'rgb',
@@ -74,7 +111,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'color_field_rgb',
   );
 
-  // Exported field_base: 'field_location'
+  // Exported field_base: 'field_location'.
   $field_bases['field_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -84,7 +121,6 @@ function slac_event_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'lid' => array(
         0 => 'lid',
@@ -163,7 +199,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'location',
   );
 
-  // Exported field_base: 'field_slac_event_audience'
+  // Exported field_base: 'field_slac_event_audience'.
   $field_bases['field_slac_event_audience'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -172,14 +208,6 @@ function slac_event_field_default_field_bases() {
     'field_name' => 'field_slac_event_audience',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -196,21 +224,13 @@ function slac_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slac_event_category'
+  // Exported field_base: 'field_slac_event_category'.
   $field_bases['field_slac_event_category'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_event_category',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -230,7 +250,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_slac_event_contact'
+  // Exported field_base: 'field_slac_event_contact'.
   $field_bases['field_slac_event_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -239,14 +259,6 @@ function slac_event_field_default_field_bases() {
     'field_name' => 'field_slac_event_contact',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -262,7 +274,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_slac_event_date'
+  // Exported field_base: 'field_slac_event_date'.
   $field_bases['field_slac_event_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -272,7 +284,6 @@ function slac_event_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -297,7 +308,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_slac_event_link'
+  // Exported field_base: 'field_slac_event_link'.
   $field_bases['field_slac_event_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -307,7 +318,6 @@ function slac_event_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -331,21 +341,13 @@ function slac_event_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_slac_event_organization'
+  // Exported field_base: 'field_slac_event_organization'.
   $field_bases['field_slac_event_organization'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slac_event_organization',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -360,7 +362,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slac_event_related_links'
+  // Exported field_base: 'field_slac_event_related_links'.
   $field_bases['field_slac_event_related_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -370,7 +372,6 @@ function slac_event_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -394,7 +395,7 @@ function slac_event_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_slac_event_scientific_area'
+  // Exported field_base: 'field_slac_event_scientific_area'.
   $field_bases['field_slac_event_scientific_area'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -403,14 +404,6 @@ function slac_event_field_default_field_bases() {
     'field_name' => 'field_slac_event_scientific_area',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(

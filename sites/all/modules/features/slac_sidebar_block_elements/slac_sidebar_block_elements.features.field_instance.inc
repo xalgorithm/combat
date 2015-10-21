@@ -10,7 +10,8 @@
 function slac_sidebar_block_elements_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-slac_sidebar_block-field_subtitle'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-slac_sidebar_block-field_subtitle'.
   $field_instances['fieldable_panels_pane-slac_sidebar_block-field_subtitle'] = array(
     'bundle' => 'slac_sidebar_block',
     'default_value' => NULL,

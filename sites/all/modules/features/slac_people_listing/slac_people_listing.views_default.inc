@@ -418,7 +418,7 @@ function slac_people_listing_views_default_views() {
   $handler->display->display_options['fields']['field_prf_contact_fax']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_prf_contact_fax']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_prf_contact_fax']['multi_type'] = 'ul';
-  /* Field: Broken/missing handler */
+  /* Field: Profile: Office Address */
   $handler->display->display_options['fields']['field_prf_contact_location']['id'] = 'field_prf_contact_location';
   $handler->display->display_options['fields']['field_prf_contact_location']['table'] = 'field_data_field_prf_contact_location';
   $handler->display->display_options['fields']['field_prf_contact_location']['field'] = 'field_prf_contact_location';

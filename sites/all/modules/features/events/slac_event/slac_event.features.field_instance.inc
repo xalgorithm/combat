@@ -10,7 +10,7 @@
 function slac_event_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_event-comment_body'
+  // Exported field_instance: 'comment-comment_node_event-comment_body'.
   $field_instances['comment-comment_node_event-comment_body'] = array(
     'bundle' => 'comment_node_event',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-body'
+  // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -127,7 +127,140 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_image'
+  // Exported field_instance: 'node-event-date_repeat_entity_clone_state'.
+  $field_instances['node-event-date_repeat_entity_clone_state'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'date_repeat_entity_clone_state',
+    'label' => 'Clone state (do not change)',
+    'required' => FALSE,
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-date_repeat_entity_master_uuid'.
+  $field_instances['node-event-date_repeat_entity_master_uuid'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'calendar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'date_repeat_entity_master_uuid',
+    'label' => 'Master UUID (do not change)',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_image'.
   $field_instances['node-event-field_event_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -260,7 +393,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_location'
+  // Exported field_instance: 'node-event-field_location'.
   $field_instances['node-event-field_location'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -337,7 +470,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_audience'
+  // Exported field_instance: 'node-event-field_slac_event_audience'.
   $field_instances['node-event-field_slac_event_audience'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -416,7 +549,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_category'
+  // Exported field_instance: 'node-event-field_slac_event_category'.
   $field_instances['node-event-field_slac_event_category'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -494,7 +627,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_contact'
+  // Exported field_instance: 'node-event-field_slac_event_contact'.
   $field_instances['node-event-field_slac_event_contact'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -573,7 +706,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_date'
+  // Exported field_instance: 'node-event-field_slac_event_date'.
   $field_instances['node-event-field_slac_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -595,6 +728,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -609,6 +743,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -635,6 +770,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -649,6 +785,7 @@ function slac_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => '',
         ),
         'type' => 'date_default',
@@ -690,7 +827,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_link'
+  // Exported field_instance: 'node-event-field_slac_event_link'.
   $field_instances['node-event-field_slac_event_link'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -762,6 +899,7 @@ function slac_event_field_default_field_instances() {
     'label' => 'Redirect event link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -775,6 +913,7 @@ function slac_event_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -790,7 +929,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_organization'
+  // Exported field_instance: 'node-event-field_slac_event_organization'.
   $field_instances['node-event-field_slac_event_organization'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -869,7 +1008,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_related_links'
+  // Exported field_instance: 'node-event-field_slac_event_related_links'.
   $field_instances['node-event-field_slac_event_related_links'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -934,6 +1073,7 @@ function slac_event_field_default_field_instances() {
     'label' => 'Related links',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -947,6 +1087,7 @@ function slac_event_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -962,7 +1103,7 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_slac_event_scientific_area'
+  // Exported field_instance: 'node-event-field_slac_event_scientific_area'.
   $field_instances['node-event-field_slac_event_scientific_area'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1041,7 +1182,8 @@ function slac_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_categories-field_field_slac_event_color'
+  // Exported field_instance:
+  // 'taxonomy_term-event_categories-field_field_slac_event_color'.
   $field_instances['taxonomy_term-event_categories-field_field_slac_event_color'] = array(
     'bundle' => 'event_categories',
     'default_value' => array(
@@ -1078,6 +1220,7 @@ function slac_event_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Audience');
+  t('Clone state (do not change)');
   t('Comment');
   t('Contact');
   t('Description');
@@ -1088,6 +1231,7 @@ function slac_event_field_default_field_instances() {
   t('Event date');
   t('Image');
   t('Location');
+  t('Master UUID (do not change)');
   t('Please enter an area of expertise for this event ');
   t('Please enter the date for the event, please specify an end date. Event can span across multiple days.');
   t('Please enter the link of the event, i.e. http://medieval-combat.org/tournaments/ User will be REDIRECTED to this page instead of viewing the event on this site.');

@@ -10,7 +10,8 @@
 function slac_profile_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_prf_bio_pub-field_document_type'
+  // Exported field_instance:
+  // 'field_collection_item-field_prf_bio_pub-field_document_type'.
   $field_instances['field_collection_item-field_prf_bio_pub-field_document_type'] = array(
     'bundle' => 'field_prf_bio_pub',
     'default_value' => NULL,
@@ -41,7 +42,8 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_prf_bio_pub-field_title_and_url'
+  // Exported field_instance:
+  // 'field_collection_item-field_prf_bio_pub-field_title_and_url'.
   $field_instances['field_collection_item-field_prf_bio_pub-field_title_and_url'] = array(
     'bundle' => 'field_prf_bio_pub',
     'default_value' => NULL,
@@ -61,6 +63,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Title and URL',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -74,6 +77,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 255,
       'title_value' => '',
       'url' => 'optional',
@@ -89,7 +93,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_ar'
+  // Exported field_instance: 'profile2-bio-field_prf_bio_ar'.
   $field_instances['profile2-bio-field_prf_bio_ar'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
@@ -135,12 +139,13 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_bio'
+  // Exported field_instance: 'profile2-bio-field_prf_bio_bio'.
   $field_instances['profile2-bio-field_prf_bio_bio'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is a space for your biographical information. Much like LinkedIn or dating sites where they provide a space for biographical information.
+Many utilize this space to detail how and why they started with Ursus',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -169,7 +174,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_ha'
+  // Exported field_instance: 'profile2-bio-field_prf_bio_ha'.
   $field_instances['profile2-bio-field_prf_bio_ha'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
@@ -215,7 +220,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_pexp'
+  // Exported field_instance: 'profile2-bio-field_prf_bio_pexp'.
   $field_instances['profile2-bio-field_prf_bio_pexp'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
@@ -261,7 +266,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-bio-field_prf_bio_pub'
+  // Exported field_instance: 'profile2-bio-field_prf_bio_pub'.
   $field_instances['profile2-bio-field_prf_bio_pub'] = array(
     'bundle' => 'bio',
     'default_value' => NULL,
@@ -294,7 +299,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_affiliation'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_affiliation'.
   $field_instances['profile2-contact-field_prf_contact_affiliation'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -328,7 +333,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_email'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_email'.
   $field_instances['profile2-contact-field_prf_contact_email'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -361,7 +366,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_fax'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_fax'.
   $field_instances['profile2-contact-field_prf_contact_fax'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -397,7 +402,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_fname'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_fname'.
   $field_instances['profile2-contact-field_prf_contact_fname'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -431,7 +436,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_lname'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_lname'.
   $field_instances['profile2-contact-field_prf_contact_lname'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -465,7 +470,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_phone'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_phone'.
   $field_instances['profile2-contact-field_prf_contact_phone'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -501,11 +506,11 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_photo'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_photo'.
   $field_instances['profile2-contact-field_prf_contact_photo'] = array(
     'bundle' => 'contact',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Use the button to submit a photograph of yourself. It will be automatically re-sized to fit certain areas of the website. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -527,12 +532,20 @@ function slac_profile_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
+          'basic_page_large_image' => 0,
+          'crop_kb_article_landscape' => 0,
           'crop_landscape' => 0,
+          'crop_news_landscape' => 0,
           'crop_portrait' => 0,
+          'crop_slac_projects' => 0,
+          'crop_slac_sidebar_block' => 0,
           'crop_square' => 0,
-          'lightbox_text_bottom' => 0,
-          'lightbox_text_left_right' => 0,
+          'mini_slideshow_image_style' => 0,
           'slac_blog_image' => 0,
+          'slac_blog_image_details' => 0,
+          'slac_kb_article_image_details' => 0,
+          'slac_news_image_details' => 0,
+          'slideshow_image_description_bottom' => 0,
         ),
       ),
       'file_directory' => '',
@@ -551,6 +564,7 @@ function slac_profile_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
@@ -569,7 +583,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_rg'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_rg'.
   $field_instances['profile2-contact-field_prf_contact_rg'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -603,7 +617,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_title'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_title'.
   $field_instances['profile2-contact-field_prf_contact_title'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -637,7 +651,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_prf_contact_website'
+  // Exported field_instance: 'profile2-contact-field_prf_contact_website'.
   $field_instances['profile2-contact-field_prf_contact_website'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -657,6 +671,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Website',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -670,6 +685,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -685,7 +701,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-contact-field_published'
+  // Exported field_instance: 'profile2-contact-field_published'.
   $field_instances['profile2-contact-field_published'] = array(
     'bundle' => 'contact',
     'default_value' => array(
@@ -719,7 +735,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-social_media-field_prf_social_facebook'
+  // Exported field_instance: 'profile2-social_media-field_prf_social_facebook'.
   $field_instances['profile2-social_media-field_prf_social_facebook'] = array(
     'bundle' => 'social_media',
     'default_value' => NULL,
@@ -739,6 +755,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Facebook',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -752,6 +769,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -767,7 +785,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-social_media-field_prf_social_flickr'
+  // Exported field_instance: 'profile2-social_media-field_prf_social_flickr'.
   $field_instances['profile2-social_media-field_prf_social_flickr'] = array(
     'bundle' => 'social_media',
     'default_value' => NULL,
@@ -787,6 +805,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Flickr',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -800,6 +819,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -815,7 +835,8 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-social_media-field_prf_social_googleplus'
+  // Exported field_instance:
+  // 'profile2-social_media-field_prf_social_googleplus'.
   $field_instances['profile2-social_media-field_prf_social_googleplus'] = array(
     'bundle' => 'social_media',
     'default_value' => NULL,
@@ -835,6 +856,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Google+',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -848,6 +870,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -863,7 +886,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-social_media-field_prf_social_linkedin'
+  // Exported field_instance: 'profile2-social_media-field_prf_social_linkedin'.
   $field_instances['profile2-social_media-field_prf_social_linkedin'] = array(
     'bundle' => 'social_media',
     'default_value' => NULL,
@@ -883,6 +906,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'LinkedIn',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -896,6 +920,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -911,7 +936,7 @@ function slac_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-social_media-field_prf_social_twitter'
+  // Exported field_instance: 'profile2-social_media-field_prf_social_twitter'.
   $field_instances['profile2-social_media-field_prf_social_twitter'] = array(
     'bundle' => 'social_media',
     'default_value' => NULL,
@@ -931,6 +956,7 @@ function slac_profile_field_default_field_instances() {
     'label' => 'Twitter',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -944,6 +970,7 @@ function slac_profile_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -983,9 +1010,12 @@ function slac_profile_field_default_field_instances() {
   t('Select the document type icon (will be displayed if a URL is added).');
   t('Select whether you would like your profile to be published or private.');
   t('The URL field can contain a link to a document, presentation, article.');
+  t('This is a space for your biographical information. Much like LinkedIn or dating sites where they provide a space for biographical information.
+Many utilize this space to detail how and why they started with Ursus');
   t('Title');
   t('Title and URL');
   t('Twitter');
+  t('Use the button to submit a photograph of yourself. It will be automatically re-sized to fit certain areas of the website. ');
   t('Website');
 
   return $field_instances;

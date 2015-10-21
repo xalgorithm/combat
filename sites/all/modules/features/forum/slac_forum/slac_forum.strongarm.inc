@@ -21,7 +21,7 @@ function slac_forum_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'advanced_forum_collapsible_containers';
-  $strongarm->value = 'none';
+  $strongarm->value = 'fade';
   $export['advanced_forum_collapsible_containers'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,7 +56,7 @@ function slac_forum_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'advanced_forum_forum_image_preset';
-  $strongarm->value = '';
+  $strongarm->value = 'media_thumbnail';
   $export['advanced_forum_forum_image_preset'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -86,7 +86,7 @@ function slac_forum_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'advanced_forum_style_all_comments';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['advanced_forum_style_all_comments'] = $strongarm;
 
   $strongarm = new stdClass();
