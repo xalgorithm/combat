@@ -59,6 +59,7 @@ features[variable][] = page_manager_node_view_disabled
 features[variable][] = page_manager_term_view_disabled
 features[variable][] = pathauto_blog_pattern
 features[variable][] = pathauto_node_blog_pattern
+features[variable][] = pathauto_taxonomy_term_blog_categories_pattern
 features[variable][] = pathauto_taxonomy_term_slac_blog_tags_pattern
 features[views_view][] = blog_page
 features[views_view][] = blog_tags

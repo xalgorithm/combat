@@ -1,7 +1,0 @@
-name = SLAC Misc frontpage
-core = 7.x
-package = SLAC
-dependencies[] = panelizer
-dependencies[] = slac_people_slideshow
-dependencies[] = slac_misc
-dependencies[] = slac_sidebar_block_elements

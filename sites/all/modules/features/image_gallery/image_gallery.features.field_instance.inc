@@ -51,7 +51,21 @@ function image_gallery_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'epsacrop' => array(
+        'styles' => array(
+          'basic_page_large_image' => 0,
+          'crop_news_landscape' => 0,
+          'crop_slac_projects' => 0,
+          'crop_slac_sidebar_block' => 0,
+          'newsletter_large' => 0,
+          'newsletter_small' => 0,
+          'slac_blog_image' => 0,
+          'slac_blog_image_details' => 0,
+          'slac_news_image_details' => 0,
+          'slideshow_image_description_bottom' => 0,
+        ),
+      ),
+      'file_directory' => 'gallery',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -61,12 +75,26 @@ function image_gallery_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_imagefield_widget',
+      'module' => 'media',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
       ),
-      'type' => 'image_miw',
+      'type' => 'media_generic',
       'weight' => 31,
     ),
   );

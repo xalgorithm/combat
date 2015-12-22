@@ -34,7 +34,7 @@ function slac_int_org_demo_modules() {
     'slac_blog_demo',
     'slac_faq_demo',
     'slac_news_demo',
-    'slac_event_demo',
+    'ursus_event_demo',
     'slac_service_catalog_demo',
     'slac_kb_demo',
     'slac_forum_demo',
@@ -42,7 +42,7 @@ function slac_int_org_demo_modules() {
     'slac_demo_accounts',
     'slac_demo_main_menu',
     'slac_demo_support_tickets',
-    'slac_newsletter_demo',
+    'ursus_newsletter_demo',
   );
 }
 

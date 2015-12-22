@@ -10,13 +10,19 @@
 function pp_lightbox_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'file-image-field_file_image_description'
+  // Exported field_instance: 'file-image-field_file_image_description'.
   $field_instances['file-image-field_file_image_description'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Image description to be shown in the lightbox.',
     'display' => array(
+      'crop_basic_page_large_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_crop_kb_article_landscape' => array(
         'label' => 'above',
         'settings' => array(),
@@ -41,6 +47,18 @@ function pp_lightbox_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_crop_slac_projects' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_crop_slac_sidebar_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_crop_square' => array(
         'label' => 'above',
         'settings' => array(),
@@ -59,7 +77,31 @@ function pp_lightbox_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_slac_blog_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_slac_blog_image_details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_slac_kb_article_image_details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_slac_news_image_details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_slideshow_image_description_bottom' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -79,6 +121,12 @@ function pp_lightbox_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wysiwyg' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

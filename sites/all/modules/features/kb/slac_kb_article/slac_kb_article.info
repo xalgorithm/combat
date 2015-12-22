@@ -1,6 +1,7 @@
 name = SLAC KB Article
 core = 7.x
 package = SLAC
+dependencies[] = features
 dependencies[] = mediafield
 dependencies[] = page_manager
 dependencies[] = slac_sidebar_block_elements
@@ -10,6 +11,7 @@ features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[field_base][] = body
 features[field_base][] = field_kb_article_media
 features[field_base][] = field_kb_categories
 features[field_instance][] = node-kb_article-body

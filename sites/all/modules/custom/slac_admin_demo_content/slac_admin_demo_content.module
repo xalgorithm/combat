@@ -34,14 +34,14 @@ function slac_admin_demo_content_form($form, &$form_state) {
     '#title' => t('Enable/disable demo content:'),
     '#options' => array(
       features_get_modules('slac_blog_demo')->name => features_get_modules('slac_blog_demo')->info['name'],
-      features_get_modules('slac_event_demo')->name => features_get_modules('slac_event_demo')->info['name'],
+      features_get_modules('ursus_event_demo')->name => features_get_modules('ursus_event_demo')->info['name'],
       features_get_modules('slac_faq_demo')->name => features_get_modules('slac_faq_demo')->info['name'],
       features_get_modules('slac_news_demo')->name => features_get_modules('slac_news_demo')->info['name'],
       features_get_modules('slac_wiki_demo')->name => features_get_modules('slac_wiki_demo')->info['name'],
     ),
     '#default_value' => array(
       (module_exists('slac_blog_demo')) ? features_get_modules('slac_blog_demo')->name : 0,
-      (module_exists('slac_event_demo')) ? features_get_modules('slac_event_demo')->name : 0,
+      (module_exists('ursus_event_demo')) ? features_get_modules('ursus_event_demo')->name : 0,
       (module_exists('slac_faq_demo')) ? features_get_modules('slac_faq_demo')->name : 0,
       (module_exists('slac_news_demo')) ? features_get_modules('slac_news_demo')->name : 0,
       (module_exists('slac_wiki_demo')) ? features_get_modules('slac_wiki_demo')->name : 0,
