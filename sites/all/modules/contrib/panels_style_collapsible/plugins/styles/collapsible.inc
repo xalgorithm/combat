@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @file
  * Definition of the collapsible panel style.
@@ -25,12 +24,12 @@ function panels_style_collapsible_region_settings_form($style_settings) {
     '#title' => t('Title'),
     '#description' => t('Title used as clickable text to open / close collapsed region.'),
     '#required' => TRUE,
-    '#default_value' => isset($style_settings['region_title']) ? $style_settings['region_title'] : ''
+    '#default_value' => isset($style_settings['region_title']) ? $style_settings['region_title'] : '',
   );
   $form['region_collapsed'] = array(
     '#type' => 'checkbox',
     '#title' => t('Collapsed by default'),
-    '#default_value' => isset($style_settings['region_collapsed']) ? $style_settings['region_collapsed'] : FALSE
+    '#default_value' => isset($style_settings['region_collapsed']) ? $style_settings['region_collapsed'] : FALSE,
   );
   return $form;
 }
@@ -45,13 +44,19 @@ function panels_style_collapsible_pane_settings_form($style_settings) {
     '#title' => t('Title'),
     '#description' => t('Title used as clickable text to open / close collapsed region. Use %title for the original pane title.'),
     '#required' => TRUE,
-    '#default_value' => isset($style_settings['pane_title']) ? $style_settings['pane_title'] : '%title'
+    '#default_value' => isset($style_settings['pane_title']) ? $style_settings['pane_title'] : '%title',
   );
   $form['pane_collapsed'] = array(
     '#type' => 'checkbox',
     '#title' => t('Collapsed by default'),
-    '#default_value' => isset($style_settings['pane_collapsed']) ? $style_settings['pane_collapsed'] : FALSE
+    '#default_value' => isset($style_settings['pane_collapsed']) ? $style_settings['pane_collapsed'] : FALSE,
   );
+  $form['pane_empty_check'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Strip HTML tags and check content on emptiness'),
+    '#default_value' => isset($style_settings['pane_empty_check']) ? $style_settings['pane_empty_check'] : FALSE,
+  );
+
   return $form;
 }
 
@@ -78,7 +83,7 @@ function theme_panels_style_collapsible_render_region($vars) {
   return theme('panels_style_collapsible', array(
     'handle' => $title,
     'content' => $content,
-    'collapsed' => $settings['region_collapsed']
+    'collapsed' => $settings['region_collapsed'],
   ));
 }
 
@@ -95,6 +100,15 @@ function theme_panels_style_collapsible_render_pane($vars) {
 
   if (empty($content->content)) {
     return;
+  }
+  $check_empty = isset($settings['pane_empty_check']) &&
+  is_string($content->content) ? $settings['pane_empty_check'] : FALSE;
+
+  if ($check_empty) {
+    $strip_content = trim(strip_tags($content->content));
+    if (empty($strip_content)) {
+      return;
+    }
   }
 
   if (!empty($settings['pane_title'])) {
@@ -114,14 +128,14 @@ function theme_panels_style_collapsible_render_pane($vars) {
       'handle' => $title,
       'content' => $content->content,
       'collapsed' => $settings['pane_collapsed'],
-      'pane' => $pane
+      'pane' => $pane,
     ));
   }
 
   return theme('panels_pane', array(
     'content' => $content,
     'pane' => $pane,
-    'display' => $display
+    'display' => $display,
   ));
 }
 

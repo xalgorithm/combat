@@ -23,9 +23,9 @@ function panels_style_collapsible_theme() {
       'variables' => array(
         'handle' => NULL,
         'content' => NULL,
-        'collapsed' => FALSE
+        'collapsed' => FALSE,
       ),
       'file' => 'plugins/styles/collapsible.inc',
-    )
+    ),
   );
 }

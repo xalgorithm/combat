@@ -847,6 +847,8 @@ function slac_event_field_default_field_instances() {
         'settings' => array(
           '404_if_empty' => FALSE,
           'code' => 301,
+          'page_restrictions' => 0,
+          'pages' => '',
         ),
         'type' => 'field_redirection',
         'weight' => 6,
@@ -857,6 +859,8 @@ function slac_event_field_default_field_instances() {
         'settings' => array(
           '404_if_empty' => FALSE,
           'code' => 301,
+          'page_restrictions' => 0,
+          'pages' => '',
         ),
         'type' => 'field_redirection',
         'weight' => 6,
